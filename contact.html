@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact</title>
+    <script
+      src="https://kit.fontawesome.com/6311b05fbe.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <colgroup>
+      <col style="width: 25%" />
+      <col style="width: 25%" />
+      <col style="width: 25%" />
+      <col style="width: 25%" />
+    </colgroup>
+
+    <table class="tableone" width="100%;">
+      <tr>
+        <td style="width:60%;">
+      
+        </td>
+        <td><a href="index.html" class="option">ABOUT ME</a></td>
+        <td><a href="resume.html" class="option">RESUME</a></td>
+        <td><a href="projects.html" class="option">PROJECTS</a></td>
+        <td><a href="contact.html" class="option">CONTACT</a></td>
+        <td><a href="gallery.html" class="option">GALLERY</a></td>
+
+      </tr>
+    </table>
+
+    <div class="header fade-in">
+      <h2 class="fade-in" style="font-weight: bold;">Contact</h2>
+      <h3 class="fade-in" style="font-weight: bold;">
+        
+        <a
+        href="https://www.linkedin.com/in/chow-wen-jun-642073202"
+        class="icon"
+        ><i class="fa-brands fa-linkedin"></i
+      ></a>
+      <a
+      href="mailto:cwenjunn523@gmail.com"
+      class="icon"
+      ><i class="fa-regular fa-envelope"></i></a>
+     
+      <p>
+      </h3>
+    </div>
+
+
+
+
+
+  </body>
+</html>
+
+
+<style>
+      .tableone,
+  tr,
+  td {
+    padding: 10px;
+    text-align: center;
+    border-collapse: collapse;
+  }
+
+  
+
+  .header {
+    background-color: #cccccc;
+    text-align: left;
+    border-radius: 10px;
+    padding:10px;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 2s;
+  }
+
+  html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+  }
+
+  .option {
+    color: #18272f;
+    position: relative;
+    text-decoration: none;
+   
+  }
+
+  a {
+    color: #18272f;
+    position: relative;
+    text-decoration: none;
+   
+  }
+
+  i{
+    font-size: 40px;
+    
+  }
+
+  option::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #18272f;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  option:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+
+</style>

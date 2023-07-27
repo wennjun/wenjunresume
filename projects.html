@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Projects</title>
+  <script src="https://kit.fontawesome.com/6311b05fbe.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <colgroup>
+    
+    <col style="width: 10%" >
+    <col style="width: 10%" >
+    <col style="width: 10%" >
+    <col style="width: 10%" >
+  </colgroup>
+
+  <table class="tableone" width="100%;">
+    <tr>
+      <td style="width:60%;">
+      
+      </td>
+      <td><a href="index.html">ABOUT ME</a></td>
+      <td><a href="resume.html">RESUME</a></td>
+      <td><a href="projects.html">PROJECTS</a></td>
+      <td><a href="contact.html">CONTACT</a></td>
+      <td><a href="gallery.html">GALLERY</a></td>
+
+    </tr>
+  </table>
+  <br>
+
+
+
+  <div class="header fade-in">
+    <h2 class="fade-in" style="font-weight: bold">Projects</h2>
+    <span><b>Title:</b> Proposed System- TimeTime (Employee Clock-In &
+      Clock-Out)<br /></span>
+
+    <span><b>Course Module:</b>Web Development<br /></span><br />
+    <span><b>Technology Used:</b> PHP, HTML, CSS, Chart.js<br /></span>
+
+    <div class="timetimeimages">
+      <img src="groupphoto.JPG" alt="Arrivo" width="400" height="300" />
+      <img src="presenting.JPG" alt="Arrivo" width="400" height="300" /><br />
+      <img src="runnerup.JPG" alt="Arrivo" width="400" height="300" /><br />
+    </div>
+    <span><b>Project Description:</b></span>
+
+    <p>During my studies in the Web Development module, my team and I decided to create a Clock-In Clock-Out System targeted at both employees and company administrators.
+    </p>
+    <p>On the employee side, users can record their daily work attendance by clocking in and out. They can also view their past attendance statistics, presented both graphically and in table format.</p>
+    <p>On the administrator side, company administrators have access to the attendance histories of all their employees. They can export this data in a CSV file format, which simplifies the process of record keeping and accurately calculating payroll. Administrators also have the ability to set working days for their employees.</p>
+    <p></p>
+  </div>
+
+  <br />
+
+  <div class="header fade-in">
+    <span><b>Title:</b> Web Development Project for
+      <a href="https://arrivo.app/">Arrivo Smart Parking Company</a> <br /></span>
+
+    <span><b>Course Module:</b> Princinple of Web Development<br /></span><br />
+
+    <span><b>Technology Used:</b> HTML, CSS<br /></span>
+
+    <div class="arrivoimages">
+      <img src="groupimage.JPG" alt="Arrivo" width="400" height="300" />
+      <img src="IMG_2957.jpg" alt="Arrivo" width="400" height="300" /><br />
+    </div>
+    <span><b>Project Description:</b></span>
+
+    <p>
+      During my studies in the Principle of Web Development module, I was tasked with
+      creating a fully functional website about how i attract stakeholder to
+      buy our product, which is the company application, Arrivo. The website
+      was designed for Arrivo Company, a local business in our community.
+    </p>
+  </div>
+</body>
+
+</html>
+
+<style>
+  .tableone,
+  tr,
+  td {
+   
+    padding: 10px;
+    text-align: center;
+    border-collapse: collapse;
+  }
+
+  .header {
+    background-color: #cccccc;
+    text-align: left;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 2s;
+  }
+
+  html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+  }
+
+  .timetimeimages {
+    display: block;
+    width: 100%;
+    margin: 1%;
+  }
+
+  a {
+    color: #18272f;
+    position: relative;
+    text-decoration: none;
+  }
+
+  a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #18272f;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+
+
+  
+
+
+  @media screen and (max-width: 768px) {
+      .tableone,
+      tr,
+      td {
+        padding: 5px;
+        width: 100%;
+      }
+
+      .header {
+        padding: 5px;
+      }
+
+      .timetimeimages, .arrivoimages {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      a {
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+      }
+    }
+
+</style>

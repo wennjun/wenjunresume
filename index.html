@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homepage</title>
+  </head>
+  <body>
+    <colgroup>
+      
+      <col style="width: 25%" />
+      <col style="width: 25%" />
+      <col style="width: 25%" />
+      <col style="width: 25%" />
+    </colgroup>
+
+    <table class="tableone" width="100%;">
+      <tr>
+        <td style="width:60%;">
+      
+        </td>
+        <td><a href="index.html">ABOUT ME</a></td>
+        <td><a href="resume.html">RESUME</a></td>
+        <td><a href="projects.html">PROJECTS</a></td>
+        <td><a href="contact.html">CONTACT</a></td>
+        <td><a href="gallery.html">GALLERY</a></td>
+
+      </tr>
+    </table>
+    <br>
+    <div class="header fade-in">
+      <h2 class="fade-in" style="font-weight: bold">Hello! I'm Chow Wen Jun</h2>
+      <h3 class="fade-in" style="font-weight: bold">
+        Fresh Graduate in Information Technology
+      </h3>
+      <p>
+        Welcome to my personal website. i recently completed my
+        <b>Diploma in Information Technology</b>
+        and am eager to start my professional journey in the tech industry.
+      </p>
+
+      <p>
+        Through my coursework, internships, and personal projects, I've
+        developed a fundamental foundation in programming,
+        database systems, and software development. I'm particularly passionate
+        about web development and have experience with a variety of modern
+        technologies including HTML, CSS, Javascript, C, , and more.
+      </p>
+      <p>
+        Browse through my website to learn more about my projects, skills, and
+        experiences. Feel free to reach out if you have any opportunities or if
+        you just want to chat about tech.
+      </p>
+      <p>Looking forward to connecting with you!</p>
+    </div>
+  </body>
+</html>
+
+<style>
+  .tableone,
+  tr,
+  td {
+
+    padding: 10px;
+    text-align: center;
+    border-collapse: collapse;
+  }
+
+
+
+  .header {
+    background-color: #cccccc;
+    text-align: left;
+    border-radius: 10px;
+    padding:10px;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 2s;
+  }
+
+  html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+  }
+  a {
+    color: #18272f;
+    position: relative;
+    text-decoration: none;
+  }
+
+  a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #18272f;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  @media only screen and (max-width: 600px) {
+  /* styles for small screens */
+  
+  .tableone, tr, td {
+    padding: 5px;
+    font-size: 0.8rem; /* reduce font size */
+  }
+
+  .header {
+    padding: 5px;
+  }
+
+  .header h2,
+  .header h3 {
+    font-size: 1.5rem; /* reduce font size */
+  }
+
+  .header p {
+    font-size: 0.8rem; /* reduce font size */
+  }
+
+ 
+}
+
+
+</style>
