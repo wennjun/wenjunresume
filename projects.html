@@ -2,32 +2,49 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Projects</title>
   <script src="https://kit.fontawesome.com/6311b05fbe.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <colgroup>
+
     
-    <col style="width: 10%" >
-    <col style="width: 10%" >
-    <col style="width: 10%" >
-    <col style="width: 10%" >
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    <col style="width: 25%" />
   </colgroup>
 
-  <table class="tableone" width="100%;">
-    <tr>
-      <td style="width:60%;">
-      
-      </td>
-      <td><a href="index.html">ABOUT ME</a></td>
-      <td><a href="resume.html">RESUME</a></td>
-      <td><a href="projects.html">PROJECTS</a></td>
-      <td><a href="contact.html">CONTACT</a></td>
-      <td><a href="gallery.html">GALLERY</a></td>
+  <div id="mobileview" style="display: none;">
+    <select class="option" onchange="location = this.value;">
+      <option value="index.html">ABOUT ME</option>
+      <option value="resume.html">RESUME</option>
+      <option value="projects.html" selected>PROJECTS</option>
+      <option value="contact.html">CONTACT</option>
+      <option value="gallery.html">GALLERY</option>
+    </select>
+  </div>
 
-    </tr>
-  </table>
+
+  <div id="desktopview">
+    <table class="tableone" width="100%;">
+      <tr>
+        <td style="width:60%;">
+
+        </td>
+        <td><a href="index.html">ABOUT ME</a></td>
+        <td><a href="resume.html">RESUME</a></td>
+        <td><a href="projects.html">PROJECTS</a></td>
+        <td><a href="contact.html">CONTACT</a></td>
+        <td><a href="gallery.html">GALLERY</a></td>
+
+      </tr>
+    </table>
+
+  </div>
   <br>
 
 
@@ -47,10 +64,14 @@
     </div>
     <span><b>Project Description:</b></span>
 
-    <p>During my studies in the Web Development module, my team and I decided to create a Clock-In Clock-Out System targeted at both employees and company administrators.
+    <p>During my studies in the Web Development module, my team and I decided to create a Clock-In Clock-Out System
+      targeted at both employees and company administrators.
     </p>
-    <p>On the employee side, users can record their daily work attendance by clocking in and out. They can also view their past attendance statistics, presented both graphically and in table format.</p>
-    <p>On the administrator side, company administrators have access to the attendance histories of all their employees. They can export this data in a CSV file format, which simplifies the process of record keeping and accurately calculating payroll. Administrators also have the ability to set working days for their employees.</p>
+    <p>On the employee side, users can record their daily work attendance by clocking in and out. They can also view
+      their past attendance statistics, presented both graphically and in table format.</p>
+    <p>On the administrator side, company administrators have access to the attendance histories of all their employees.
+      They can export this data in a CSV file format, which simplifies the process of record keeping and accurately
+      calculating payroll. Administrators also have the ability to set working days for their employees.</p>
     <p></p>
   </div>
 
@@ -85,7 +106,7 @@
   .tableone,
   tr,
   td {
-   
+
     padding: 10px;
     text-align: center;
     border-collapse: collapse;
@@ -150,38 +171,56 @@
 
 
 
-  
 
 
-  @media screen and (max-width: 768px) {
-      .tableone,
-      tr,
-      td {
-        padding: 5px;
-        width: 100%;
-      }
 
-      .header {
-        padding: 5px;
-      }
+  @media screen and (max-width: 600px) {
 
-      .timetimeimages, .arrivoimages {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-
-      img {
-        width: 100%;
-        height: auto;
-      }
-
-      a {
-        display: block;
-        padding: 10px 0;
-        text-align: center;
-      }
+    .tableone,
+    tr,
+    td {
+      padding: 5px;
+      width: 100%;
     }
 
+    .header {
+      padding: 5px;
+    }
+
+    .timetimeimages,
+    .arrivoimages {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    a {
+      display: block;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    #desktopview {
+      display: none;
+    }
+
+    #mobileview {
+      display: block !important;
+
+
+    }
+
+    select {
+      border-radius: 10px;
+      padding: 5px;
+
+    }
+
+  }
 </style>
