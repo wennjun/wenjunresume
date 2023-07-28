@@ -1,63 +1,76 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact</title>
-    <script
-      src="https://kit.fontawesome.com/6311b05fbe.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <colgroup>
-      <col style="width: 25%" />
-      <col style="width: 25%" />
-      <col style="width: 25%" />
-      <col style="width: 25%" />
-    </colgroup>
 
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Contact</title>
+  <script src="https://kit.fontawesome.com/6311b05fbe.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <colgroup>
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+  </colgroup>
+
+  <div id="mobileview" style="display: none;">
+    <select class="option" onchange="location = this.value;">
+     
+      <option value="index.html">ABOUT ME</option>
+      <option value="resume.html">RESUME</option>
+      <option value="projects.html">PROJECTS</option>
+      <option value="contact.html" selected>CONTACT</option>
+      <option value="gallery.html">GALLERY</option>
+    </select>
+  </div>
+
+
+  <div id="desktopview">
     <table class="tableone" width="100%;">
       <tr>
         <td style="width:60%;">
-      
+
         </td>
-        <td><a href="index.html" class="option">ABOUT ME</a></td>
-        <td><a href="resume.html" class="option">RESUME</a></td>
-        <td><a href="projects.html" class="option">PROJECTS</a></td>
-        <td><a href="contact.html" class="option">CONTACT</a></td>
-        <td><a href="gallery.html" class="option">GALLERY</a></td>
+        <td><a href="index.html">ABOUT ME</a></td>
+        <td><a href="resume.html">RESUME</a></td>
+        <td><a href="projects.html">PROJECTS</a></td>
+        <td><a href="contact.html">CONTACT</a></td>
+        <td><a href="gallery.html">GALLERY</a></td>
 
       </tr>
     </table>
+    
 
-    <div class="header fade-in">
-      <h2 class="fade-in" style="font-weight: bold;">Contact</h2>
-      <h3 class="fade-in" style="font-weight: bold;">
-        
-        <a
-        href="https://www.linkedin.com/in/chow-wen-jun-642073202"
-        class="icon"
-        ><i class="fa-brands fa-linkedin"></i
-      ></a>
-      <a
-      href="mailto:cwenjunn523@gmail.com"
-      class="icon"
-      ><i class="fa-regular fa-envelope"></i></a>
-     
+  </div>
+
+  <br>
+
+  <div class="header">
+    <h2 class="fade-in" style="font-weight: bold;">Contact</h2>
+    <h3 class="fade-in" style="font-weight: bold; text-align: center;">
+
+      <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon"><i
+          class="fa-brands fa-linkedin"></i></a>
+      <a href="mailto:cwenjunn523@gmail.com" class="icon"><i class="fa-regular fa-envelope"></i></a>
+
       <p>
-      </h3>
-    </div>
+    </h3>
+  </div>
 
 
 
 
 
-  </body>
+</body>
+
 </html>
 
 
 <style>
-      .tableone,
+  .tableone,
   tr,
   td {
     padding: 10px;
@@ -65,19 +78,20 @@
     border-collapse: collapse;
   }
 
-  
+
 
   .header {
     background-color: #cccccc;
     text-align: left;
     border-radius: 10px;
-    padding:10px;
+    padding: 10px;
   }
 
   @keyframes fadeIn {
     0% {
       opacity: 0;
     }
+
     100% {
       opacity: 1;
     }
@@ -96,19 +110,38 @@
     color: #18272f;
     position: relative;
     text-decoration: none;
-   
+
   }
 
   a {
     color: #18272f;
     position: relative;
     text-decoration: none;
-   
   }
 
-  i{
+  a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #18272f;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+
+  i {
     font-size: 40px;
-    
+
   }
 
   option::before {
@@ -131,4 +164,22 @@
   }
 
 
+  @media screen and (max-width: 600px) {
+
+    #desktopview {
+      display: none;
+    }
+
+    #mobileview {
+      display: block !important;
+
+
+    }
+
+    select {
+      border-radius: 10px;
+      padding: 5px;
+
+    }
+  }
 </style>
