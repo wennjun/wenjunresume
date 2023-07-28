@@ -36,11 +36,11 @@
           <td style="width:60%;">
   
           </td>
-          <td><a href="index.html">ABOUT ME</a></td>
-          <td><a href="resume.html">RESUME</a></td>
-          <td><a href="projects.html">PROJECTS</a></td>
-          <td><a href="contact.html">CONTACT</a></td>
-          <td><a href="gallery.html">GALLERY</a></td>
+          <td><a href="index.html" class="option">ABOUT ME</a></td>
+          <td><a href="resume.html" class="option">RESUME</a></td>
+          <td><a href="projects.html" class="option">PROJECTS</a></td>
+          <td><a href="contact.html" class="option">CONTACT</a></td>
+          <td><a href="gallery.html" class="option">GALLERY</a></td>
   
         </tr>
       </table>
@@ -50,7 +50,7 @@
 
     <div class="header fade-in">
       <a href="PDF_CHOWWENJUNRESUME.pdf" download>
-        <button class="button">Download as PDF</button>
+        <button class="button" onclick="downloadPDF()">Download as PDF</button>
       </a>
 
       <h2 class="fade-in" style="font-weight: bold">Resume</h2>
@@ -227,6 +227,14 @@
     </div>
   </body>
 </html>
+<script>
+  function downloadPDF() {
+      const link = document.createElement('a');
+      link.href = 'PDF_CHOWWENJUNRESUME.pdf';
+      link.download = 'PDF_CHOWWENJUNRESUME.pdf';
+      link.dispatchEvent(new MouseEvent('click'));
+  }
+  </script>
 
 <style>
   .tableone,
@@ -251,13 +259,13 @@
     cursor: pointer;
   }
 
-  a {
+  .option {
     color: #18272f;
     position: relative;
     text-decoration: none;
   }
 
-  a::before {
+  .option::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -271,7 +279,7 @@
     transition: transform 0.3s ease-in-out;
   }
 
-  a:hover::before {
+  .option:hover::before {
     transform-origin: left;
     transform: scaleX(1);
   }
