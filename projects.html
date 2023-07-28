@@ -20,10 +20,10 @@
 
   <div id="mobileview" style="display: none;">
     <select class="option" onchange="location = this.value;">
-      <option value="index.html">ABOUT ME</option>
-      <option value="resume.html">RESUME</option>
-      <option value="projects.html" selected>PROJECTS</option>
-      <option value="contact.html">CONTACT</option>
+      <option value="index.html" >ABOUT ME</option>
+      <option value="resume.html" >RESUME</option>
+      <option value="projects.html"  selected>PROJECTS</option>
+      <option value="contact.html" >CONTACT</option>
       <option value="gallery.html">GALLERY</option>
     </select>
   </div>
@@ -35,11 +35,11 @@
         <td style="width:60%;">
 
         </td>
-        <td><a href="index.html">ABOUT ME</a></td>
-        <td><a href="resume.html">RESUME</a></td>
-        <td><a href="projects.html">PROJECTS</a></td>
-        <td><a href="contact.html">CONTACT</a></td>
-        <td><a href="gallery.html">GALLERY</a></td>
+        <td><a href="index.html" class="option">ABOUT ME</a></td>
+        <td><a href="resume.html" class="option">RESUME</a></td>
+        <td><a href="projects.html" class="option">PROJECTS</a></td>
+        <td><a href="contact.html" class="option">CONTACT</a></td>
+        <td><a href="gallery.html" class="option">GALLERY</a></td>
 
       </tr>
     </table>
@@ -129,6 +129,12 @@
     }
   }
 
+  a {
+    color: #18272f;
+    position: relative;
+    text-decoration: none;
+  }
+
   .fade-in {
     animation: fadeIn 2s;
   }
@@ -144,13 +150,13 @@
     margin: 1%;
   }
 
-  a {
+  .option {
     color: #18272f;
     position: relative;
     text-decoration: none;
   }
 
-  a::before {
+  .option::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -164,7 +170,7 @@
     transition: transform 0.3s ease-in-out;
   }
 
-  a:hover::before {
+  .option:hover::before {
     transform-origin: left;
     transform: scaleX(1);
   }
@@ -200,7 +206,7 @@
       height: auto;
     }
 
-    a {
+    .option {
       display: block;
       padding: 10px 0;
       text-align: center;
