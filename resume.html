@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     <title>Resume</title>
     <script
       src="https://kit.fontawesome.com/6311b05fbe.js"
@@ -15,19 +18,34 @@
       <col style="width: 25%" />
     </colgroup>
 
-    <table class="tableone" width="100%;">
-      <tr>
-        <td style="width:60%;">
-      
-        </td>
-        <td><a href="index.html" class="option">ABOUT ME</a></td>
-        <td><a href="resume.html" class="option">RESUME</a></td>
-        <td><a href="projects.html" class="option">PROJECTS</a></td>
-        <td><a href="contact.html" class="option">CONTACT</a></td>
-        <td><a href="gallery.html" class="option">GALLERY</a></td>
-
-      </tr>
-    </table>
+    <div id="mobileview" style="display: none;">
+      <select class="option" onchange="location = this.value;">
+        
+        <option value="index.html">ABOUT ME</option>
+        <option value="resume.html" selected>RESUME</option>
+        <option value="projects.html">PROJECTS</option>
+        <option value="contact.html">CONTACT</option>
+        <option value="gallery.html">GALLERY</option>
+      </select>
+    </div>
+  
+  
+    <div id="desktopview">
+      <table class="tableone" width="100%;">
+        <tr>
+          <td style="width:60%;">
+  
+          </td>
+          <td><a href="index.html">ABOUT ME</a></td>
+          <td><a href="resume.html">RESUME</a></td>
+          <td><a href="projects.html">PROJECTS</a></td>
+          <td><a href="contact.html">CONTACT</a></td>
+          <td><a href="gallery.html">GALLERY</a></td>
+  
+        </tr>
+      </table>
+  
+    </div>
     <br />
 
     <div class="header fade-in">
@@ -233,6 +251,32 @@
     cursor: pointer;
   }
 
+  a {
+    color: #18272f;
+    position: relative;
+    text-decoration: none;
+  }
+
+  a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #18272f;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+
   .button {
     background-color: white;
     color: black;
@@ -307,46 +351,28 @@
     transform: scaleX(1);
   }
 
-  @media only screen and (max-width: 600px) {
-    .tableone,
-    tr,
-    td {
-      padding: 5px;
-      text-align: center;
-      border-collapse: collapse;
-    }
-
-    .button {
-      font-size: 12px;
-      padding: 5px;
-    }
-
-    .header {
-      padding: 5px;
-    }
-
-    i {
-      font-size: 15px;
-    }
-
-    .option {
-      font-size: 12px;
-    }
-
-    span {
-      font-size: 15px;
-    }
-
-    p {
-      font-size: 12px;
-    }
-
-    ul {
-      font-size: 12px;
-    }
-
-    h2 {
-      font-size: 25px;
-    }
+  @media screen and (max-width: 600px) {
+  .tableone, tr, td {
+    padding: 5px;
+    
   }
+
+  
+
+  #desktopview {
+      display: none;
+    }
+
+    #mobileview {
+      display: block !important;
+
+
+    }
+
+    select {
+      border-radius: 10px;
+      padding: 5px;
+
+    }
+}
 </style>
