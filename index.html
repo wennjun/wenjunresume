@@ -9,13 +9,7 @@
 </head>
 
 <body>
-  <colgroup>
-
-    <col style="width: 25%" />
-    <col style="width: 25%" />
-    <col style="width: 25%" />
-    <col style="width: 25%" />
-  </colgroup>
+ 
 
   <div id="mobileview" style="display: none;">
     <select class="option" onchange="location = this.value;">
@@ -31,14 +25,14 @@
   <div id="desktopview">
     <table class="tableone" width="100%;">
       <tr>
-        <td style="width:60%;">
+        <td style="width:55%;">
 
         </td>
-        <td><a href="index.html">ABOUT ME</a></td>
-        <td><a href="resume.html">RESUME</a></td>
-        <td><a href="projects.html">PROJECTS</a></td>
-        <td><a href="contact.html">CONTACT</a></td>
-        <td><a href="gallery.html">GALLERY</a></td>
+        <td><a href="index.html" class="options">ABOUT ME</a></td>
+        <td><a href="resume.html" class="options">RESUME</a></td>
+        <td><a href="projects.html" class="options">PROJECTS</a></td>
+        <td><a href="contact.html" class="options">CONTACT</a></td>
+        <td><a href="gallery.html" class="options">GALLERY</a></td>
 
       </tr>
     </table>
@@ -49,7 +43,7 @@
   <div class="header fade-in">
     <h2 class="fade-in" style="font-weight: bold">Hello! I'm Chow Wen Jun</h2>
     <h3 class="fade-in" style="font-weight: bold">
-      Fresh Graduate in Information Technology
+      Fresh Graduate with a Diploma in Information Technology from Taylor's College.
     </h3>
     <p>
       Welcome to my personal website. i recently completed my
@@ -71,6 +65,57 @@
     </p>
     <p class="greeting">Looking forward to connecting with you!</p>
   </div>
+  <br>
+
+  <div class="header fade-in">
+    <h3 class="fade-in" style="font-weight: bold">During my studies, I gained comprehensive knowledge and practical
+      experience in several IT modules, including: </h3>
+      <p style="font-style: italic;">Sources:<a href="https://college.taylors.edu.my/en/study/diploma-programmes/diploma-in-information-technology-dit.html" class="nothing"> Taylor's College</a> </p>
+    <table class="modules">
+
+      <td style="width:50%">
+        <ul>
+          <span style="text-decoration: underline; font-weight: bold;">Core Subjects</span>
+          <li>Academic English</li>
+          <li>Computing Mathematics</li>
+          <li>Introduction to Information Technology</li>
+          <li>Life Skills For Personal Development</li>
+          <li>Problem Solving and Programming Design</li>
+          <li>Human-Computer Interaction</li>
+          <li>Computer Architecture</li>
+          <li>Management Information System</li>
+          <li>Object-Oriented Analysis and Design</li>
+          <li>Object-Oriented Programming</li>
+          <li>Data Communications and Networking</li>
+          <li>Database Systems</li>
+          <li>Principles of Web Development</li>
+          <li>Software Project Management</li>
+          <li>Web Development</li>
+          <li>Operating Systems</li>
+          <li>Calculus and Algebra</li>
+          <li>Computing Project</li>
+          <li>Industrial Training</li>
+
+
+        </ul>
+      </td>
+
+      <td style="width:50%">
+
+        <ul class="ul">
+          <span style="text-decoration: underline; font-weight: bold;">Elective Subjects</span>
+
+          <li>Millennials in Malaysia: Cultivating Interpersonal Relationships</li>
+          <li>Community Service Initiative</li>
+          <li>Copywriting</li>
+          <li>Pengajian Malaysia 2</li>
+          <li>Principle of Marketing</li>
+
+        </ul>
+      </td>
+    </table>
+  </div>
+
 </body>
 
 </html>
@@ -85,6 +130,15 @@
     border-collapse: collapse;
   }
 
+  .modules tr, td{
+    vertical-align: top;
+    text-align: left;
+
+  }
+
+
+
+
 
   .header {
     background-color: #cccccc;
@@ -94,28 +148,46 @@
   }
 
   @keyframes typing {
-  0% { width: 0; }
-  25% { width: 35ch; } /* The text is fully typed out at 25% of the animation duration */
-  100% { width: 35ch; } /* The text remains on screen for the rest of the animation */
-}
+    0% {
+      width: 0;
+    }
 
-@keyframes blink-caret {
-  0%, 100% { border-color: black; }
-  50% { border-color: transparent; }
-}
+    25% {
+      width: 35ch;
+    }
 
- .greeting{ 
-  font-size: normal;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  color: black;
-  border-right: .1em solid black;
+    /* The text is fully typed out at 25% of the animation duration */
+    100% {
+      width: 35ch;
+    }
 
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 4s steps(14, end) infinite,
-             blink-caret .5s step-end infinite alternate;
-}
+    /* The text remains on screen for the rest of the animation */
+  }
+
+  @keyframes blink-caret {
+
+    0%,
+    100% {
+      border-color: black;
+    }
+
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  .greeting {
+    font-size: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+    border-right: .1em solid black;
+
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(14, end) infinite,
+      blink-caret .5s step-end infinite alternate;
+  }
 
   @keyframes fadeIn {
     0% {
@@ -142,7 +214,7 @@
     text-decoration: none;
   }
 
-  a::before {
+  .options::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -156,7 +228,7 @@
     transition: transform 0.3s ease-in-out;
   }
 
-  a:hover::before {
+  .options:hover::before {
     transform-origin: left;
     transform: scaleX(1);
   }
@@ -193,33 +265,33 @@
       display: none;
     }
 
-       #mobileview {
+    #mobileview {
       display: block !important;
       text-align: center;
 
-      
+
 
 
     }
 
-  
 
-   
+
+
 
     select {
       border-radius: 10px;
-       padding:10px;
-      width:100%;
+      padding: 10px;
       font-size: 15px;
+      width: 100%;
 
-      
-    
+
+
 
     }
 
-    option{
+    option {
       font-size: 15px;
-      
+
     }
 
   }
