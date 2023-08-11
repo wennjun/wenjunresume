@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+ 
 
   <div id="mobileview" style="display: none;">
     <select class="option" onchange="location = this.value;">
@@ -58,9 +58,6 @@
       about web development and have experience with a variety of modern
       technologies including HTML, CSS, Javascript, C and many more.
     </p>
-
-    <p>I'm gearing up to start my Bachelor's degree next month, and I'm excited to further my tech journey. website and
-      feel free to connect!</p>
     <p>
       Browse through my website to learn more about my projects, skills, and
       experiences. Feel free to reach out if you have any opportunities or if
@@ -73,137 +70,51 @@
   <div class="header fade-in">
     <h3 class="fade-in" style="font-weight: bold">During my studies, I gained comprehensive knowledge and practical
       experience in several IT modules, including: </h3>
-    <p style="font-style: italic;">Sources:<a
-        href="https://college.taylors.edu.my/en/study/diploma-programmes/diploma-in-information-technology-dit.html"
-        class="nothing"> Taylor's College (Diploma IT)</a>
-       / <a
-        href="https://university.taylors.edu.my/en/study/undergraduate/computing/bachelor-computer-science-hons.html"
-        class="nothing"> Taylor's University (Bachelor CS)</a>
-       </p>
+      <p style="font-style: italic;">Sources:<a href="https://college.taylors.edu.my/en/study/diploma-programmes/diploma-in-information-technology-dit.html" class="nothing"> Taylor's College</a> </p>
     <table class="modules">
 
+      <td style="width:50%">
+        <ul>
+          <span style="text-decoration: underline; font-weight: bold;">Core Subjects</span>
+          <li>Academic English</li>
+          <li>Computing Mathematics</li>
+          <li>Introduction to Information Technology</li>
+          <li>Life Skills For Personal Development</li>
+          <li>Problem Solving and Programming Design</li>
+          <li>Human-Computer Interaction</li>
+          <li>Computer Architecture</li>
+          <li>Management Information System</li>
+          <li>Object-Oriented Analysis and Design</li>
+          <li>Object-Oriented Programming</li>
+          <li>Data Communications and Networking</li>
+          <li>Database Systems</li>
+          <li>Principles of Web Development</li>
+          <li>Software Project Management</li>
+          <li>Web Development</li>
+          <li>Operating Systems</li>
+          <li>Calculus and Algebra</li>
+          <li>Computing Project</li>
+          <li>Industrial Training</li>
 
-      <select id="optionSelect">
-        <option value="" disabled selected>Please select</option>
-        <option value="dit">Diploma in Information Technology</option>
-        <option value="bcs">Bachelor of Computer Science (Honours)</option>
-        <option value="showall">Show all (DIT & BCompSc)</option>
 
+        </ul>
+      </td>
 
-      </select>
+      <td style="width:50%">
 
-      <button onclick="displayResult()">Show Result</button>
-      <p id="result"></p>
-      <tr id="content-dit" style="display:none;">
-        <td colspan="2" style="padding:5px;">
-          <p style="font-size: 20px; font-weight: bold;">Diploma in Information Technology</p>
-        </td>
-        <td style="width:50%">
-          <ul>
-            <span style="text-decoration: underline; font-weight: bold;">Core Subjects</span>
-            <li>Academic English</li>
-            <li>Computing Mathematics</li>
-            <li>Introduction to Information Technology</li>
-            <li>Life Skills For Personal Development</li>
-            <li>Problem Solving and Programming Design</li>
-            <li>Human-Computer Interaction</li>
-            <li>Computer Architecture</li>
-            <li>Management Information System</li>
-            <li>Object-Oriented Analysis and Design</li>
-            <li>Object-Oriented Programming</li>
-            <li>Data Communications and Networking</li>
-            <li>Database Systems</li>
-            <li>Principles of Web Development</li>
-            <li>Software Project Management</li>
-            <li>Web Development</li>
-            <li>Operating Systems</li>
-            <li>Calculus and Algebra</li>
-            <li>Computing Project</li>
-            <li>Industrial Training</li>
-          </ul>
-        </td>
-        <td style="width:50%">
-          <ul class="ul">
-            <span style="text-decoration: underline; font-weight: bold;">Elective Subjects</span>
+        <ul class="ul">
+          <span style="text-decoration: underline; font-weight: bold;">Elective Subjects</span>
 
-            <li>Millennials in Malaysia: Cultivating Interpersonal Relationships</li>
-            <li>Community Service Initiative</li>
-            <li>Copywriting</li>
-            <li>Pengajian Malaysia 2</li>
-            <li>Principle of Marketing</li>
-          </ul>
-        </td>
-      </tr>
-      <tr id="content-bcs" style="display:none;">
-        <td colspan="2" style="padding:5px;">
-          <p style="font-size: 20px; font-weight: bold;">Bachelor of Computer Science (Honours)</p>
-        </td>
-        <td style="width:50%">
-          <ul>
-            <span style="text-decoration: underline; font-weight: bold;">Core Subjects</span>
-            <li>Computer Architecture and Organisation</li>
-            <li>Discrete Structures</li>
-            <li>Software Engineering</li>
-            <li>Data Structures and Algorithm</li>
-            <li>System Fundamentals</li>
-            <li>Theory of Computation</li>
-            <br>
-            <span style="text-decoration: underline; font-weight: bold;">Compulsory modules</span>
-            <li>Ideating Start-up</li>
-            <li>Machine Learning and Parallel Computing</li>
-            <li>Advanced Programming</li>
-            <br>
-            <span style="text-decoration: underline; font-weight: bold;">Specialisation: Data Science</span>
-            <li>Statistical inteference and modeling</li>
-            <li>Data Science Principles</li>
-            <li>Data Mining</li>
-            <li>Big Data Technologies</li>
-          </ul>
+          <li>Millennials in Malaysia: Cultivating Interpersonal Relationships</li>
+          <li>Community Service Initiative</li>
+          <li>Copywriting</li>
+          <li>Pengajian Malaysia 2</li>
+          <li>Principle of Marketing</li>
 
-        </td>
-
-        <td style="width:50%">
-
-          <ul class="ul">
-            <span style="text-decoration: underline; font-weight: bold;">Extension: Cyber Security</span>
-
-            <li>Computers and Network Security</li>
-            <li>Computers Intrusion Detection</li>
-            <li>Computers Crime and Digital Evidence</li>
-            <li>Wireless Netoworks and Security</li>
-          </ul>
-        </td>
-      </tr>
+        </ul>
+      </td>
     </table>
   </div>
-
-  <script>
-    function displayResult() {
-      var selectElement = document.getElementById("optionSelect");
-      var resultElement = document.getElementById("result");
-
-      var selectedValue = selectElement.value;
-
-      // Hide all content divs
-      hideAllContent();
-
-      if (selectedValue === "dit") {
-        document.getElementById("content-dit").style.display = "block";
-      } else if (selectedValue === "bcs") {
-        document.getElementById("content-bcs").style.display = "block";
-      } else if (selectedValue === "showall") {
-        document.getElementById("content-dit").style.display = "block";
-        document.getElementById("content-bcs").style.display = "block";
-      }
-    }
-
-    function hideAllContent() {
-      var contentDivs = document.querySelectorAll("[id^='content-']");
-      contentDivs.forEach(function (div) {
-        div.style.display = "none";
-      });
-    }
-  </script>
 
 </body>
 
@@ -219,16 +130,9 @@
     border-collapse: collapse;
   }
 
-  .modules tr,
-  td {
+  .modules tr, td{
     vertical-align: top;
     text-align: left;
-
-  }
-
-  .modules {
-    border: 2px solid black;
-    border-radius: 15px;
 
   }
 
@@ -272,7 +176,7 @@
     }
   }
 
-
+  
 
   .greeting {
     font-size: normal;
@@ -340,7 +244,7 @@
     td {
       padding: 5px;
       font-size: 0.9rem;
-
+  
     }
 
     .header {
