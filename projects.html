@@ -3,7 +3,7 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
 
@@ -17,10 +17,10 @@
 
   <div id="mobileview" style="display: none;">
     <select class="option" onchange="location = this.value;">
-      <option value="index.html" >HOME</option>
-      <option value="resume.html" >RESUME</option>
-      <option value="projects.html"  selected>PROJECTS</option>
-      <option value="contact.html" >CONTACT</option>
+      <option value="index.html">HOME</option>
+      <option value="resume.html">RESUME</option>
+      <option value="projects.html" selected>PROJECTS</option>
+      <option value="contact.html">CONTACT</option>
       <option value="gallery.html">GALLERY</option>
     </select>
   </div>
@@ -53,19 +53,43 @@
 
     <span><b>Course Module:</b>Web Development<br /></span><br />
     <span><b>Technology Used:</b> PHP, HTML, CSS, Chart.js<br /></span>
+    <br>
+    <div id="mobileview" style="display: none;">
+      <div class="slideshow-container" id="slideshow-container1">
+        <div class="image active">
+          <img src="groupphoto.JPG" alt="Group Image" style="width:100%; height:100%;">
+        </div>
+        <div class="image">
+          <img src="presenting.JPG" alt="Group Photo" style="width:100%; height:100%;">
+        </div>
+        <div class="image">
+          <img src="runnerup.JPG" alt="Origin" style="width:100%; height:100%;">
+        </div>
 
-    <div class="timetimeimages">
-      <img src="groupphoto.JPG" alt="Arrivo" width="400" height="300">
-      <img src="presenting.JPG" alt="Arrivo" width="400" height="300">
-      <img src="runnerup.JPG" alt="Arrivo" width="400" height="300">
+        <div class="prev" onclick="changeSlide(-1)">&#10094;</div>
+        <div class="next" onclick="changeSlide(1)">&#10095;</div>
+      </div>
     </div>
+    <div id="desktopview">
+      <div class="timetimeimages" style="text-align: center;">
+        <img src="groupphoto.JPG" alt="timetimeimages" width="400" height="300">
+        <img src="presenting.JPG" alt="timetimeimages" width="400" height="300">
+        <img src="runnerup.JPG" alt="timetimeimages" width="400" height="300">
+      </div>
+    </div>
+    <br>
     <span><b>Project Description:</b></span>
 
-    <p>During my studies in the Web Development module, my team and I decided to create a Clock-In Clock-Out System targeted at both employees and company administrators.
+    <p>During my studies in the Web Development module, my team and I decided to create a Clock-In Clock-Out System
+      targeted at both employees and company administrators.
     </p>
-    <p>On the employee side, users can record their daily work attendance by clocking in and out. They can also view their past attendance statistics, presented both graphically and in table format.</p>
-    <p>On the administrator side, company administrators have access to the attendance histories of all their employees. They can export this data in a CSV file format, which simplifies the process of record keeping and accurately calculating payroll. Administrators also have the ability to set working days for their employees.</p>
-    
+    <p>On the employee side, users can record their daily work attendance by clocking in and out. They can also view
+      their past attendance statistics, presented both graphically and in table format.</p>
+    <p>On the administrator side, company administrators have access to the attendance histories of all their
+      employees. They can export this data in a CSV file format, which simplifies the process of record keeping and
+      accurately calculating payroll. Administrators also have the ability to set working days for their employees.
+    </p>
+
   </div>
 
   <br />
@@ -78,10 +102,27 @@
 
     <span><b>Technology Used:</b> HTML, CSS<br /></span>
 
-    <div class="arrivoimages">
-      <img src="groupimage.JPG" alt="Arrivo" width="400" height="300" />
-      <img src="IMG_2957.jpg" alt="Arrivo" width="400" height="300" /><br />
+    <br>
+    <div id="mobileview" style="display: none;">
+      <div class="slideshow-container" id="slideshow-container2">
+        <div class="image active">
+          <img src="groupimage.JPG" alt="Group Image" style="width:100%; height:100%;">
+        </div>
+        <div class="image">
+          <img src="IMG_2957.jpg" alt="Group Photo" style="width:100%; height:100%;">
+        </div>
+
+        <div class="prev" onclick="changeSlide(-1)">&#10094;</div>
+        <div class="next" onclick="changeSlide(1)">&#10095;</div>
+      </div>
     </div>
+    <div id="desktopview">
+      <div class="timetimeimages" style="text-align: center;">
+        <img src="groupimage.JPG" alt="Arrivo" width="400" height="300">
+        <img src="IMG_2957.jpg" alt="Arrivo" width="400" height="300">
+      </div>
+    </div>
+    <br>
     <span><b>Project Description:</b></span>
 
     <p>
@@ -94,6 +135,46 @@
 </body>
 
 </html>
+<script>
+  const slideshowContainers = document.querySelectorAll('.slideshow-container');
+
+slideshowContainers.forEach(container => {
+  let slideIndex = 0;
+  const slides = container.querySelectorAll('.image');
+
+  function showSlide(n) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[n].classList.add('active');
+  }
+
+  function changeSlide(n) {
+    slideIndex += n;
+    if (slideIndex >= slides.length) slideIndex = 0;
+    if (slideIndex < 0) slideIndex = slides.length - 1;
+    showSlide(slideIndex);
+  }
+
+  container.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
+  container.querySelector('.next').addEventListener('click', () => changeSlide(1));
+
+  showSlide(slideIndex);
+
+  let timer = setInterval(() => changeSlide(1), 5000);
+
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  container.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  container.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    if (touchEndX < touchStartX) changeSlide(1);
+    if (touchEndX > touchStartX) changeSlide(-1);
+  });
+});
+</script>
 
 <style>
   .tableone,
@@ -168,12 +249,62 @@
     transform: scaleX(1);
   }
 
+  .slideshow-container {
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 65%;
+  }
+
+  .image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .image {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s;
+  }
+
+
+  .image.active {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+
 
 
 
 
 
   @media screen and (max-width: 600px) {
+
+    .slideshow-container {
+      max-width: 100%;
+      height: auto;
+    }
 
     .tableone,
     tr,
@@ -199,7 +330,7 @@
       height: auto;
     }
 
- 
+
 
     #desktopview {
       display: none;
@@ -214,15 +345,16 @@
 
     select {
       border-radius: 10px;
-       padding: 10px;
-      width:100%;
+      padding: 10px;
+      width: 100%;
       font-size: 15px;
 
 
     }
-    option{
+
+    option {
       font-size: 15px;
-      
+
     }
 
   }
