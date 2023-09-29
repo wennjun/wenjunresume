@@ -1,364 +1,319 @@
-
-
 <!DOCTYPE html>
 <html>
-  <head>
-     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400&family=Quicksand:wght@400;600&family=Rajdhani&family=Saira:ital,wght@0,400;1,100;1,200&family=Silkscreen&display=swap" rel="stylesheet">
 
 
-    <title>Resume</title>
-    <link rel="icon" href="image1.jpg" type="image/jpg">
-    <script
-      src="https://kit.fontawesome.com/6311b05fbe.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <colgroup>
-      <col style="width: 25%" />
-      <col style="width: 25%" />
-      <col style="width: 25%" />
-      <col style="width: 25%" />
-    </colgroup>
+  <title>Resume</title>
+  <link rel="icon" href="image1.jpg" type="image/jpg">
+  <script src="https://kit.fontawesome.com/6311b05fbe.js" crossorigin="anonymous"></script>
+</head>
 
-    <div id="mobileview" style="display: none;">
-      <select class="option" onchange="location = this.value;">
-        
-        <option value="index.html">HOME</option>
-        <option value="resume.html" selected>RESUME</option>
-        <option value="projects.html">PROJECTS</option>
-        <option value="contact.html">CONTACT</option>
-        <option value="gallery.html">GALLERY</option>
-      </select>
-    </div>
-  
-  
-    <div id="desktopview">
-      <table class="tableone" width="100%;">
-        <tr>
-          <td style="width:55%;">
-  
-          </td>
-          <td><a href="index.html" class="option">HOME</a></td>
-          <td><a href="resume.html" class="option">RESUME</a></td>
-          <td><a href="projects.html" class="option">PROJECTS</a></td>
-          <td><a href="contact.html" class="option">CONTACT</a></td>
-          <td><a href="gallery.html" class="option">GALLERY</a></td>
-  
-        </tr>
-      </table>
-  
-    </div>
+<body>
+  <colgroup>
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+  </colgroup>
+
+  <div id="mobileview" style="display: none;">
+    <select class="option" onchange="location = this.value;">
+
+      <option value="index.html">HOME</option>
+      <option value="resume.html" selected>RESUME</option>
+      <option value="projects.html">PROJECTS</option>
+      <option value="contact.html">CONTACT</option>
+      <option value="gallery.html">GALLERY</option>
+    </select>
+  </div>
+
+
+  <div id="desktopview">
+    <table class="tableone" width="100%;">
+      <tr>
+        <td style="width:55%;">
+
+        </td>
+        <td><a href="index.html" class="option">HOME</a></td>
+        <td><a href="resume.html" class="option">RESUME</a></td>
+        <td><a href="projects.html" class="option">PROJECTS</a></td>
+        <td><a href="contact.html" class="option">CONTACT</a></td>
+        <td><a href="gallery.html" class="option">GALLERY</a></td>
+
+      </tr>
+    </table>
+
+  </div>
+  <br>
+  <h2 class="fade-in" style="font-weight: bold; text-align:center;">Resume</h2>
+  <div class="header fade-in">
+    <a href="PDF_CHOWWENJUNRESUME.pdf" download>
+      <button class="button" onclick="downloadPDF()">Download as PDF</button>
+    </a>
+
+
+    <br>
+    <br>
+    <span style="font-size: 25px; font-weight: bold">CHOW WEN JUN </span>
+    <br>
+
+    <span style="font-size: 15px; padding-left: 2px; font-style: italic">FRESH GRADUATE</span>
+
+    <p><i class="fa-regular fa-envelope"></i><a href="mailto: cwenjunn523@gmail.com" class="longclickable">
+        cwenjunn523@gmail.com</a></p>
+    <p>
+
+      <i class="fa-solid fa-location-dot"></i>
+      Puchong, Selangor
+    </p>
+    <p><i class="fa-solid fa-phone-volume"></i> 012-3853506</p>
+
     <br />
+    <span style="font-size: 20px; font-weight: bold; text-decoration: underline">OBJECTIVES</span>
+    <p>
+      As a fresh grad with an IT Diploma, I know my way around programming,
+      managing data, and keeping networks running. I’m all about solving
+      problems and I’m looking for a gig where I can do that and keep learning
+      more.
+    </p>
 
-    <div class="header fade-in">
-      <a href="PDF_CHOWWENJUNRESUME.pdf" download>
-        <button class="button" onclick="downloadPDF()">Download as PDF</button>
-      </a>
-
-      <h2 class="fade-in" style="font-weight: bold">Resume</h2>
-
-      <span style="font-size: 25px; font-weight: bold">CHOW WEN JUN </span>
-      <br />
-
-      <span style="font-size: 15px; padding-left: 2px; font-style: italic"
-        >FRESH GRADUATE</span
-      >
-
-      <p><i class="fa-regular fa-envelope"></i><a href="mailto: cwenjunn523@gmail.com" class="longclickable"> cwenjunn523@gmail.com</a></p>
-      <p>
-      
-        <i class="fa-solid fa-location-dot"></i>
-        Puchong, Selangor
-      </p>
-      <p><i class="fa-solid fa-phone-volume"></i> 012-3853506</p>
-
-      <br />
-      <span
-        style="font-size: 20px; font-weight: bold; text-decoration: underline"
-        >OBJECTIVES</span
-      >
-      <p>
-        As a fresh grad with an IT Diploma, I know my way around programming,
-        managing data, and keeping networks running. I’m all about solving
-        problems and I’m looking for a gig where I can do that and keep learning
-        more.
-      </p>
-
-      <span
-        style="font-size: 20px; font-weight: bold; text-decoration: underline"
-        >EDUCATION</span
-      >
-      <p>Diploma in Information Technology<br /><b>Taylor's College</b><br>
-      <span style="font-style: italic; font-size: 13px;">2021 August - 2023 August</span></p>
-      <p>Bachelor of Computer Science (Honours)<br /><b>Taylor's University</b><br><span style="font-style: italic; font-size: 13px;">2023 September - 2025 September</span></p>
+    <span style="font-size: 20px; font-weight: bold; text-decoration: underline">EDUCATION</span>
+    <p>Diploma in Information Technology<br /><b>Taylor's College</b><br>
+      <span style="font-style: italic; font-size: 13px;">2021 August - 2023 August</span>
+    </p>
+    <p>Bachelor of Computer Science (Honours)<br /><b>Taylor's University</b><br><span
+        style="font-style: italic; font-size: 13px;">2023 September - 2025 September</span></p>
 
 
-      <span
-        style="font-size: 20px; font-weight: bold; text-decoration: underline"
-        >SKILLS</span
-      >
-      <ul>
-        <li>Problem Solving</li>
-        <li>Communication</li>
-        <li>Language: English,Madarin, Bahasa Melayu</li>
-        <li>Time Management</li>
-      </ul>
+    <span style="font-size: 20px; font-weight: bold; text-decoration: underline">SKILLS</span>
+    <ul>
+      <li>Problem Solving</li>
+      <li>Communication</li>
+      <li>Language: English,Madarin, Bahasa Melayu</li>
+      <li>Time Management</li>
+    </ul>
 
-      <span
-        style="font-size: 20px; font-weight: bold; text-decoration: underline"
-        >WORK EXPERIENCE</span
-      >
-      <br /><br />
-      <span style="font-size: 15px; font-weight: bold"
-        >INTERNSHIP- WEB DEVELOPER<br
-      /></span>
+    <span style="font-size: 20px; font-weight: bold; text-decoration: underline">WORK EXPERIENCE</span>
+    <br /><br />
+    <span style="font-size: 15px; font-weight: bold">INTERNSHIP- WEB DEVELOPER<br /></span>
 
-      <span style="font-size: 15px; font-weight: bold"
-        >ORIGIN INTEGRATED STUDIOS<br
-      /></span>
-      <a
-        href="https://www.google.com/maps/place/Origin+Integrated+Studios+Sdn.+Bhd./@3.0860949,101.5869352,17z/data=!3m1!4b1!4m6!3m5!1s0x31cc4c18012f598d:0x76cecfec7e368c12!8m2!3d3.0860949!4d101.5869352!16s%2Fg%2F11c704y_dd?entry=ttu"
-        class="icon"
-        ><i class="fa-solid fa-location-dot"></i
-      ></a>
+    <span style="font-size: 15px; font-weight: bold">ORIGIN INTEGRATED STUDIOS<br /></span>
+    <a href="https://www.google.com/maps/place/Origin+Integrated+Studios+Sdn.+Bhd./@3.0860949,101.5869352,17z/data=!3m1!4b1!4m6!3m5!1s0x31cc4c18012f598d:0x76cecfec7e368c12!8m2!3d3.0860949!4d101.5869352!16s%2Fg%2F11c704y_dd?entry=ttu"
+      class="icon"><i class="fa-solid fa-location-dot"></i></a>
 
-      <a
-        href="https://www.linkedin.com/company/origin-integrated-studios/"
-        class="icon"
-        ><i class="fa-brands fa-linkedin"></i
-      ></a>
+    <a href="https://www.linkedin.com/company/origin-integrated-studios/" class="icon"><i
+        class="fa-brands fa-linkedin"></i></a>
 
-      <a href="https://www.originistudios.com/" class="icon"
-        ><i class="fa-brands fa-chrome"></i
-      ></a>
+    <a href="https://www.originistudios.com/" class="icon"><i class="fa-brands fa-chrome"></i></a>
 
-      <br /><span style="font-size: 12px; font-weight: bold"
-        >JANUARY-MAR 2023</span
-      >
+    <br /><span style="font-size: 12px; font-weight: bold">JANUARY-MAR 2023</span>
 
-      <ul>
-        <li>
-          Learn and create dynamic report / forms using HTML5, CSS3, and
-          JavaScript.
-        </li>
-        <li>
-          I have been setting up a variety of forms for hospitals including
-          government hospitals and private hospitals.
-        </li>
-        <li>
-          Provide documentations regarding assigned tasks whenever necessary.
-        </li>
-      </ul>
+    <ul>
+      <li>
+        Learn and create dynamic report / forms using HTML5, CSS3, and
+        JavaScript.
+      </li>
+      <li>
+        I have been setting up a variety of forms for hospitals including
+        government hospitals and private hospitals.
+      </li>
+      <li>
+        Provide documentations regarding assigned tasks whenever necessary.
+      </li>
+    </ul>
 
-      <span style="font-size: 15px; font-weight: bold">ONLINE BUSINESS</span
-      ><br />
-      <span style="font-size: 12px; font-weight: bold">APR 2020-MAR 2021</span
-      ><br />
-      <span style="font-size: 15px; font-weight: bold"
-        >SHOPEE- XIAOCHIDAWEIWANG<br
-      /></span>
-      <a href="https://shopee.com.my/xiaochidaweiwang" class="icon"
-        ><i class="fa-brands fa-chrome"></i
-      ></a>
+    <span style="font-size: 15px; font-weight: bold">ONLINE BUSINESS</span><br />
+    <span style="font-size: 12px; font-weight: bold">APR 2020-MAR 2021</span><br />
+    <span style="font-size: 15px; font-weight: bold">SHOPEE- XIAOCHIDAWEIWANG<br /></span>
+    <a href="https://shopee.com.my/xiaochidaweiwang" class="icon"><i class="fa-brands fa-chrome"></i></a>
 
-      <ul>
-        <li>
-          Process online order and arrange for delivery to ensure parcel reach
-          customer without issue.
-        </li>
-        <li>
-          Post delivery, follow up with customer, if issue arises, help to
-          address and resolve customer problem.
-        </li>
-        <li>Always ensure timeliness in replying customers queries.</li>
-        <li>Perform stock count at month end to ensure stock availability.</li>
-        <li>Small Achievement : obtained 4.8/5.0 review on Shopee Malaysia</li>
-      </ul>
+    <ul>
+      <li>
+        Process online order and arrange for delivery to ensure parcel reach
+        customer without issue.
+      </li>
+      <li>
+        Post delivery, follow up with customer, if issue arises, help to
+        address and resolve customer problem.
+      </li>
+      <li>Always ensure timeliness in replying customers queries.</li>
+      <li>Perform stock count at month end to ensure stock availability.</li>
+      <li>Small Achievement : obtained 4.8/5.0 review on Shopee Malaysia</li>
+    </ul>
 
-      <span style="font-size: 15px; font-weight: bold">ADMIN IN DIGI STORE</span
-      ><br />
-      <span style="font-size: 12px; font-weight: bold">AUG-NOV 2021</span><br />
-      <span style="font-size: 15px; font-weight: bold"
-        >MMAG HOLDINGS BERHAD<br
-      /></span>
-      <a
-        href="https://www.google.com/maps/place/MMag+Holdings+Berhad/@3.0415947,101.5651773,17z/data=!3m1!4b1!4m6!3m5!1s0x31cc4d6def2f2ddb:0x88c78ea5f9111ad2!8m2!3d3.0415947!4d101.5651773!16s%2Fg%2F11fy1r9yz0?entry=ttu"
-        class="icon"
-        ><i class="fa-solid fa-location-dot"></i
-      ></a>
-      <a href="https://www.mmag.com.my/" class="icon"
-        ><i class="fa-brands fa-chrome"></i
-      ></a>
+    <span style="font-size: 15px; font-weight: bold">ADMIN IN DIGI STORE</span><br />
+    <span style="font-size: 12px; font-weight: bold">AUG-NOV 2021</span><br />
+    <span style="font-size: 15px; font-weight: bold">MMAG HOLDINGS BERHAD<br /></span>
+    <a href="https://www.google.com/maps/place/MMag+Holdings+Berhad/@3.0415947,101.5651773,17z/data=!3m1!4b1!4m6!3m5!1s0x31cc4d6def2f2ddb:0x88c78ea5f9111ad2!8m2!3d3.0415947!4d101.5651773!16s%2Fg%2F11fy1r9yz0?entry=ttu"
+      class="icon"><i class="fa-solid fa-location-dot"></i></a>
+    <a href="https://www.mmag.com.my/" class="icon"><i class="fa-brands fa-chrome"></i></a>
 
-      <ul>
-        <li>
-          Work part time remotely from home using Anydesk application to process
-          customer order and delivery note
-        </li>
-      </ul>
+    <ul>
+      <li>
+        Work part time remotely from home using Anydesk application to process
+        customer order and delivery note
+      </li>
+    </ul>
 
-      <span
-        style="font-size: 20px; font-weight: bold; text-decoration: underline"
-        >COMPUTER LITERACY</span
-      >
+    <span style="font-size: 20px; font-weight: bold; text-decoration: underline">COMPUTER LITERACY</span>
 
-      <span style="font-size: 15px; font-weight: bold"
-        ><br />Study Field:<br
-      /></span>
+    <span style="font-size: 15px; font-weight: bold"><br />Study Field:<br /></span>
 
-      <ul>
-        <li>HTML, CSS & Javascript</li>
-        <li>Java & C Programming Language</li>
-        <li>Database SQL Query, PHP</li>
-        <li>Application Development (Basic Vue.js, Basic Firebase)</li>
-      </ul>
+    <ul>
+      <li>HTML, CSS & Javascript</li>
+      <li>Java & C Programming Language</li>
+      <li>Database SQL Query, PHP</li>
+      <li>Application Development (Basic Vue.js, Basic Firebase)</li>
+    </ul>
 
-      <span
-        style="font-size: 20px; font-weight: bold; text-decoration: underline"
-        >ACADEMIC RESULT</span
-      >
-<br>
-      <br>
-<span style="text-decoration: underline;">Diploma In Information Technology</span>
+    <span style="font-size: 20px; font-weight: bold; text-decoration: underline">ACADEMIC RESULT</span>
+    <br>
+    <br>
+    <span style="text-decoration: underline;">Diploma In Information Technology</span>
 
-<span style="font-size: 15px; font-weight: bold"
-><br />
-Dean List Awards (Semester 1,2,3,4)<br
-/></span>
-      <ul>
-        
-        <li>Semester 1: GPA 3.74</li>
-        <li>Semester 1.5: GPA 3.20</li>
-        <li>Semester 2: GPA 3.85</li>
-        <li>Semester 3: GPA 3.53</li>
-        <li>Semester 3.5 (Internship): PASSED</li>
-        <li>Semester 4 (Final Semester): GPA 3.58, CGPA 3.62</li>
-      </ul>
+    <span style="font-size: 15px; font-weight: bold"><br />
+      Dean List Awards (Semester 1,2,3,4)<br /></span>
+    <ul>
 
-      <span style="text-decoration: underline;">Bachelor of Computer Science (Honours)</span>
-      <ul>
-        
-        <li>Semester 1: Starting <b>September 18</b></li>
-        
-      </ul>
+      <li>Semester 1: GPA 3.74</li>
+      <li>Semester 1.5: GPA 3.20</li>
+      <li>Semester 2: GPA 3.85</li>
+      <li>Semester 3: GPA 3.53</li>
+      <li>Semester 3.5 (Internship): PASSED</li>
+      <li>Semester 4 (Final Semester): GPA 3.58, CGPA 3.62</li>
+    </ul>
+
+    <span style="text-decoration: underline;">Bachelor of Computer Science (Honours)</span>
+    <ul>
+
+      <li>Semester 1: Starting <b>September 18</b></li>
+
+    </ul>
 
 
 
-    </div>
-
-    
+  </div>
 
 
-    <footer>
-
-        <table class="footer" width="100%;">
-            <colgroup>
-                <col style="width:50%;">
-                <col style="width:50%;">
 
 
-            </colgroup>
-            <tr>
-                <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
-                    <span>FOLLOW ME</span>
-                </td>
-                <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
-                    <span>QUICK LINKS</span>
+  <footer>
 
-                </td>
+    <table class="footer" width="100%;">
+      <colgroup>
+        <col style="width:50%;">
+        <col style="width:50%;">
 
-            </tr>
-            <tr>
-                <td style="text-align: left;font-size: 25px;">
-                    <p> 
-                        <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
-                            class="fa-brands fa-linkedin"></i></a>                
-                        
-                        <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i class="fa-solid fa-envelope"></i></a>
-                    </td>
-                <td style="text-align: left;">
-                    <a href="index.html">Home</a>
-                    <br>
-                    
-                    <a href="resume.html">Resume</a>
-                    <br>
 
-                    <a href="projects.html">Projects</a>
-                    <br>
+      </colgroup>
+      <tr>
+        <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+          <span>FOLLOW ME</span>
+        </td>
+        <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+          <span>QUICK LINKS</span>
 
-                    <a href="contact.html">Contact</a>
-                    <br>
+        </td>
 
-                    <a href="gallery.html">Gallery</a>
-                    <br>
+      </tr>
+      <tr>
+        <td style="text-align: left;font-size: 25px;">
+          <p>
+            <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
+                class="fa-brands fa-linkedin"></i></a>
 
-                    <a href="aboutpage.html">About Page</a>
+            <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i class="fa-solid fa-envelope"></i></a>
+        </td>
+        <td style="text-align: left;">
+          <a href="index.html">Home</a>
+          <br>
+
+          <a href="resume.html">Resume</a>
+          <br>
+
+          <a href="projects.html">Projects</a>
+          <br>
+
+          <a href="contact.html">Contact</a>
+          <br>
+
+          <a href="gallery.html">Gallery</a>
+          <br>
+
+          <a href="aboutpage.html">About Page</a>
 
 
 
 
 
-                </td>
-             
-
-            </tr> 
-        </table>
-        <hr style="opacity: 0.5;">
-        <p class="copyright">
-            Copyright © 2023 All Rights Reserved by Chow Wen Jun
-        </p>
-
-    </footer>
+        </td>
 
 
+      </tr>
+    </table>
+    <hr style="opacity: 0.5;">
+    <p class="copyright">
+      Copyright © 2023 All Rights Reserved by Chow Wen Jun
+    </p>
+
+  </footer>
 
 
-  </body>
+
+
+</body>
+
 </html>
 <script>
   function downloadPDF() {
-      const link = document.createElement('a');
-      link.href = 'PDF_CHOWWENJUNRESUME.pdf';
-      link.download = 'PDF_CHOWWENJUNRESUME.pdf';
-      link.dispatchEvent(new MouseEvent('click'));
+    const link = document.createElement('a');
+    link.href = 'PDF_CHOWWENJUNRESUME.pdf';
+    link.download = 'PDF_CHOWWENJUNRESUME.pdf';
+    link.dispatchEvent(new MouseEvent('click'));
   }
-  </script>
+</script>
 
 <style>
+  footer {
+    background-color: #a9a9a9;
+    padding: 5px;
 
-   footer {
-            background-color: #a9a9a9;
-            
-            padding:10px;
-      
 
-        }
 
-        .footer tr, .footer td, .footer a {
-            text-decoration: none;
-            color:black;
-        }
 
-        .copyright{
-            text-align: center;
-        }
+  }
+
+  .footer tr,
+  .footer td,
+  .footer a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .copyright {
+    text-align: center;
+  }
 
   .tableone,
   tr,
   td {
- 
+
     padding: 10px;
     text-align: center;
     border-collapse: collapse;
   }
 
-  .longclickable{
+  .longclickable {
     text-decoration: none;
-    color:black;
+    color: black;
   }
 
   .button {
@@ -394,6 +349,15 @@ Dean List Awards (Semester 1,2,3,4)<br
     transition: transform 0.3s ease-in-out;
   }
 
+  h2{
+    font-family: 'Bai Jamjuree', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Rajdhani', sans-serif;
+font-family: 'Saira', sans-serif;
+font-family: 'Silkscreen', cursive;
+font-size: 40px;
+  }
+
   .option:hover::before {
     transform-origin: left;
     transform: scaleX(1);
@@ -413,7 +377,7 @@ Dean List Awards (Semester 1,2,3,4)<br
 
 
 
- 
+
 
   i {
     font-size: 20px;
@@ -421,7 +385,7 @@ Dean List Awards (Semester 1,2,3,4)<br
 
   .icon {
     display: inline;
-    color:#18272f;
+    color: #18272f;
   }
 
   .header {
@@ -434,6 +398,7 @@ Dean List Awards (Semester 1,2,3,4)<br
     0% {
       opacity: 0;
     }
+
     100% {
       opacity: 1;
     }
@@ -447,13 +412,14 @@ Dean List Awards (Semester 1,2,3,4)<br
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
   }
- 
+
 
   .option {
     color: #18272f;
     position: relative;
     text-decoration: none;
   }
+
   .option::before {
     content: "";
     position: absolute;
@@ -474,16 +440,20 @@ Dean List Awards (Semester 1,2,3,4)<br
   }
 
   @media screen and (max-width: 600px) {
-  .tableone, tr, td {
-    padding: 5px;
-    
-  }
-  #desktopview {
+
+    .tableone,
+    tr,
+    td {
+      padding: 5px;
+
+    }
+
+    #desktopview {
       display: none;
     }
 
-  
-   #mobileview {
+
+    #mobileview {
       display: block !important;
       text-align: center;
 
@@ -493,13 +463,13 @@ Dean List Awards (Semester 1,2,3,4)<br
       border-radius: 10px;
       padding: 10px;
       font-size: 15px;
-      width:100%;
+      width: 100%;
     }
 
-    option{
+    option {
       font-size: 15px;
-      
+
     }
 
-}
+  }
 </style>
