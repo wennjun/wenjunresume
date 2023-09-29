@@ -4,318 +4,424 @@
 
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-
-    <title>Contact</title>
-      <link rel="icon" href="image1.jpg" type="image/jpg">
-  
-    <script src="https://kit.fontawesome.com/6311b05fbe.js" crossorigin="anonymous"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-    <style>
-        button {
-            padding: 10px;
-            border: 1px solid black;
-            text-align: right;
-
-        }
-
-        input[type="text"] {
-            padding: 10px;
-            border: 1px solid black;
-            width: 100%;
-            font-size: small;
-        }
-
-        input[type="email"] {
-            padding: 10px;
-            border: 1px solid black;
-            width: 100%;
-            font-size: small;
-
-        }
-
-        textarea {
-            padding: 10px;
-            border: 1px solid black;
-            width: 100%;
-            font-size: small;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400&family=Quicksand:wght@400;600&family=Rajdhani&family=Saira:ital,wght@0,400;1,100;1,200&family=Silkscreen&display=swap"
+    rel="stylesheet">
 
 
+  <title>Contact</title>
+  <link rel="icon" href="image1.jpg" type="image/jpg">
 
+  <script src="https://kit.fontawesome.com/6311b05fbe.js" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <style>
+    button {
+      padding: 10px;
+      border: 1px solid black;
+      text-align: right;
 
-        .container {
-            border: 5px solid black;
-            height: auto;
-            width: 50%;
-            margin: auto;
+    }
 
-            padding: 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
+    input[type="text"] {
+      padding: 10px;
+      border: 1px solid black;
+      width: 100%;
+      font-size: small;
+    }
 
-        html {
-            font-family: Arial, Helvetica, sans-serif;
-        }
+    input[type="email"] {
+      padding: 10px;
+      border: 1px solid black;
+      width: 100%;
+      font-size: small;
 
-        .box {
-            width: 70%;
-            height: 100%;
-            padding: 10px;
-            font-family: 'Courier New', monospace;
+    }
 
-
-        }
-
-        .boxx {
-            text-align: center;
-            margin: auto;
-
-
-
-
-        }
-
-        .containerinside {
-            text-align: left;
-            margin: auto;
-            font-size: 15px;
-            background-color: #d3d3d3;
-            height: 380px;
-            padding: 10px;
-            width: 250px;
-            font-family: 'Courier New', monospace;
-
-
-        }
-
-        .icon {
-            font-size: 25px;
-            text-align: center;
-            color: black;
-
-        }
-
-        .option {
-            color: #18272f;
-            position: relative;
-            text-decoration: none;
-        }
-
-        .option::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            border-radius: 4px;
-            background-color: #18272f;
-            bottom: 0;
-            left: 0;
-            transform-origin: right;
-            transform: scaleX(0);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .option:hover::before {
-            transform-origin: left;
-            transform: scaleX(1);
-        }
-
-        .tableone,
-        tr,
-        td {
-            padding: 10px;
-            text-align: center;
-            border-collapse: collapse;
-        }
-
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
-
-
-        select {
-      border-radius: 10px;
-      padding: 5px;
-      font-size: 15px;
-      width:100%;
-
+    textarea {
+      padding: 10px;
+      border: 1px solid black;
+      width: 100%;
+      font-size: small;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
 
 
 
-        @media screen and (max-width: 600px) {
+    .container {
+      border: 5px solid black;
+      height: auto;
+      width: 50%;
+      margin: auto;
 
-            .container {
-                grid-template-columns: 1fr;
-                width: 100%;
-                padding: 10px;
-                box-sizing: border-box;
-            }
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
 
-            .box, .boxx {
-                width: 100%;
-            }
+    html {
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-            .containerinside {
-                width: 100%;
-                height: auto;
-            }
-
-            #desktopview {
-                display: none;
-            }
-
-            #mobileview {
-                display: block !important;
-            }
-        }
+    .box {
+      width: 70%;
+      height: 100%;
+      padding: 10px;
+      font-family: 'Courier New', monospace;
 
 
+    }
+
+    .boxx {
+      text-align: center;
+      margin: auto;
 
 
 
-        /* First inner container */
-    </style>
+
+    }
+
+    .containerinside {
+      text-align: left;
+      margin: auto;
+      font-size: 15px;
+      background-color: #d3d3d3;
+      height: 380px;
+      padding: 10px;
+      width: 250px;
+      font-family: 'Courier New', monospace;
+
+
+    }
+
+    footer {
+    background-color: #a9a9a9;
+    padding: 5px;
+
+
+
+
+  }
+
+  .footer tr,
+  .footer td,
+  .footer a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
+    .icon {
+      font-size: 25px;
+      text-align: center;
+      color: black;
+
+    }
+
+    .option {
+      color: #18272f;
+      position: relative;
+      text-decoration: none;
+    }
+
+    .option::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      border-radius: 4px;
+      background-color: #18272f;
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .option:hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+
+    .tableone,
+    tr,
+    td {
+      padding: 10px;
+      text-align: center;
+      border-collapse: collapse;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+
+    select {
+      border-radius: 10px;
+      padding: 5px;
+      font-size: 15px;
+      width: 100%;
+
+    }
+
+    h2 {
+      font-family: 'Bai Jamjuree', sans-serif;
+      font-family: 'Quicksand', sans-serif;
+      font-family: 'Rajdhani', sans-serif;
+      font-family: 'Saira', sans-serif;
+      font-family: 'Silkscreen', cursive;
+      font-size: 40px;
+    }
+
+
+
+
+    @media screen and (max-width: 600px) {
+
+      .container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      .box,
+      .boxx {
+        width: 100%;
+      }
+
+      .containerinside {
+        width: 100%;
+        height: auto;
+      }
+
+      #desktopview {
+        display: none;
+      }
+
+      #mobileview {
+        display: block !important;
+      }
+    }
+
+
+
+
+
+    /* First inner container */
+  </style>
 </head>
 
 <body>
-    <colgroup>
-        <col style="width: 25%" />
-        <col style="width: 25%" />
-        <col style="width: 25%" />
-        <col style="width: 25%" />
-    </colgroup>
+  <colgroup>
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+  </colgroup>
 
-    <div id="mobileview" style="display: none;">
-        <select class="option" onchange="location = this.value;">
+  <div id="mobileview" style="display: none;">
+    <select class="option" onchange="location = this.value;">
 
-            <option value="index.html">HOME</option>
-            <option value="resume.html">RESUME</option>
-            <option value="projects.html">PROJECTS</option>
-            <option value="contact.html" selected>CONTACT</option>
-            <option value="gallery.html">GALLERY</option>
-        </select>
+      <option value="index.html">HOME</option>
+      <option value="resume.html">RESUME</option>
+      <option value="projects.html">PROJECTS</option>
+      <option value="contact.html" selected>CONTACT</option>
+      <option value="gallery.html">GALLERY</option>
+    </select>
+  </div>
+
+
+  <div id="desktopview">
+    <table class="tableone" width="100%;">
+      <tr>
+        <td style="width:55%;">
+
+        </td>
+        <td><a href="index.html" class="option">HOME</a></td>
+        <td><a href="resume.html" class="option">RESUME</a></td>
+        <td><a href="projects.html" class="option">PROJECTS</a></td>
+        <td><a href="contact.html" class="option">CONTACT</a></td>
+        <td><a href="gallery.html" class="option">GALLERY</a></td>
+
+      </tr>
+    </table>
+
+  </div>
+  <br>
+  <div id="desktopview">
+    <h2 class="fade-in" style="font-weight: bold; text-align: center;">CONTACT</h2>
+  </div>
+
+  <div id="mobileview" style="display: none;">
+    <h2 class="fade-in" style="font-weight: bold; text-align: center;">CONTACT</h2>
+  </div>
+  <div class="container">
+    <div class="box">
+      <span style="font-size: 40px; font-weight: bold;">Let's Work together</span>
+
+
+
+      <form action="" id="contactform" method="post">
+        <br>
+        <input type="text" id="name" name="name" width="100%;" placeholder="Name" required><br><br>
+
+        <br>
+        <input type="email" id="email" name="email" placeholder="Email" required><br><br>
+
+        <br>
+        <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea><br><br>
+
+        <button type="submit" value="Submit">Submit</button>
+      </form>
     </div>
 
 
-    <div id="desktopview">
-        <table class="tableone" width="100%;">
-            <tr>
-                <td style="width:55%;">
+    <div class="boxx">
+      <div class="containerinside">
+        <br>
+        <br>
+        <div class="containerinsideagain" style="text-align:center;">
+          <img src="IMG_4186.jpg" width="200" height="200" alt="image">
+        </div>
+        <br>
 
-                </td>
-                <td><a href="index.html" class="option">HOME</a></td>
-                <td><a href="resume.html" class="option">RESUME</a></td>
-                <td><a href="projects.html" class="option">PROJECTS</a></td>
-                <td><a href="contact.html" class="option">CONTACT</a></td>
-                <td><a href="gallery.html" class="option">GALLERY</a></td>
+        <span>cwenjunn523@gmail.com</span><br><br>
+        <span>Selangor, MY</span><br>
 
-            </tr>
-        </table>
-
-
-    </div>
-    <br>
-
-    <div class="container">
-        <div class="box">
-            <span style="font-size: 40px; font-weight: bold;">Let's Work together</span>
-
-
-
-            <form action="" id="contactform" method="post">
-                <br>
-                <input type="text" id="name" name="name" width="100%;" placeholder="Name" required><br><br>
-
-                <br>
-                <input type="email" id="email" name="email" placeholder="Email" required><br><br>
-
-                <br>
-                <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea><br><br>
-
-                <button type="submit" value="Submit">Submit</button>
-            </form>
+        <div class="icon"><br>
+          <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
+              class="fa-brands fa-linkedin"></i></a>
         </div>
 
 
-        <div class="boxx">
-            <div class="containerinside">
-                <br>
-                <br>
-                <div class="containerinsideagain" style="text-align:center;">
-                    <img src="IMG_4186.jpg" width="200" height="200" alt="image">
-                </div>
-                <br>
-
-                <span>cwenjunn523@gmail.com</span><br><br>
-                <span>Selangor, MY</span><br>
-
-                <div class="icon"><br>
-                    <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
-                            class="fa-brands fa-linkedin"></i></a>
-                </div>
-
-
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
+<br>
+
+  <footer>
+
+    <table class="footer" width="100%;">
+      <colgroup>
+        <col style="width:50%;">
+        <col style="width:50%;">
+
+
+      </colgroup>
+      <tr>
+        <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+          <span>FOLLOW ME</span>
+        </td>
+        <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+          <span>QUICK LINKS</span>
+
+        </td>
+
+      </tr>
+      <tr>
+        <td style="text-align: left;font-size: 25px;">
+          <p>
+            <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
+                class="fa-brands fa-linkedin"></i></a>
+
+            <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i class="fa-solid fa-envelope"></i></a>
+        </td>
+        <td style="text-align: left;">
+          <a href="index.html">Home</a>
+          <br>
+
+          <a href="resume.html">Resume</a>
+          <br>
+
+          <a href="projects.html">Projects</a>
+          <br>
+
+          <a href="contact.html">Contact</a>
+          <br>
+
+          <a href="gallery.html">Gallery</a>
+          <br>
+
+          <a href="aboutpage.html">About Page</a>
 
 
 
 
 
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyBjhKhr92kiToeON4Q7LpdfJdxtx9dFsMs",
-            authDomain: "chow-wen-jun-resume.firebaseapp.com",
-            databaseURL: "https://chow-wen-jun-resume-default-rtdb.firebaseio.com/",
-            projectId: "chow-wen-jun-resume",
-            storageBucket: "chow-wen-jun-resume.appspot.com",
-            messagingSenderId: "725387473275",
-            appId: "1:725387473275:web:f06532e3b72a06ac5c8dde"
-        };
+        </td>
 
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        var contactformDB = firebase.database().ref('contactform');
 
-        document.getElementById('contactform').addEventListener('submit', submitForm);
+      </tr>
+    </table>
+    <hr style="opacity: 0.5;">
+    <p class="copyright">
+      Copyright © 2023 All Rights Reserved by Chow Wen Jun
+    </p>
 
-        function submitForm(e) {
-            e.preventDefault();
+  </footer>
 
-            var name = getElementVal('name');
-            var email = getElementVal('email');
-            var message = getElementVal('message');
 
-            // Pushing data to Firebase
-            contactformDB.push().set({
-                name: name,
-                email: email,
-                message: message
-            }).then(() => {
-                console.log("Data sent successfully");
-                document.getElementById('name').value = '';
-                document.getElementById('email').value = '';
-                document.getElementById('message').value = '';
-            }).catch((error) => {
-                console.error("Failed to send data: ", error);
-            });
-        }
 
-        const getElementVal = (id) => {
-            return document.getElementById(id).value;
-        };
-    </script>
+
+
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBjhKhr92kiToeON4Q7LpdfJdxtx9dFsMs",
+      authDomain: "chow-wen-jun-resume.firebaseapp.com",
+      databaseURL: "https://chow-wen-jun-resume-default-rtdb.firebaseio.com/",
+      projectId: "chow-wen-jun-resume",
+      storageBucket: "chow-wen-jun-resume.appspot.com",
+      messagingSenderId: "725387473275",
+      appId: "1:725387473275:web:f06532e3b72a06ac5c8dde"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    var contactformDB = firebase.database().ref('contactform');
+
+    document.getElementById('contactform').addEventListener('submit', submitForm);
+
+    function submitForm(e) {
+      e.preventDefault();
+
+      var name = getElementVal('name');
+      var email = getElementVal('email');
+      var message = getElementVal('message');
+
+      // Pushing data to Firebase
+      contactformDB.push().set({
+        name: name,
+        email: email,
+        message: message
+      }).then(() => {
+        console.log("Data sent successfully");
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+      }).catch((error) => {
+        console.error("Failed to send data: ", error);
+      });
+    }
+
+    const getElementVal = (id) => {
+      return document.getElementById(id).value;
+    };
+  </script>
 </body>
 
 </html>
