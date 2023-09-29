@@ -3,16 +3,27 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400&family=Quicksand:wght@400;600&family=Rajdhani&family=Saira:ital,wght@0,400;1,100;1,200&family=Silkscreen&display=swap"
+  rel="stylesheet">
   <title>Home</title>
   <link rel="icon" href="image1.jpg" type="image/jpg">
+  <script src="https://kit.fontawesome.com/6311b05fbe.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-
+  <colgroup>
+    <col style="width: 25%">
+    <col style="width: 25%">
+    <col style="width: 25%">
+    <col style="width: 25%">
+  </colgroup>
 
   <div id="mobileview" style="display: none;">
     <select class="option" onchange="location = this.value;">
@@ -31,21 +42,26 @@
         <td style="width:55%;">
 
         </td>
-        <td><a href="index.html" class="options">HOME</a></td>
-        <td><a href="resume.html" class="options">RESUME</a></td>
-        <td><a href="projects.html" class="options">PROJECTS</a></td>
-        <td><a href="contact.html" class="options">CONTACT</a></td>
-        <td><a href="gallery.html" class="options">GALLERY</a></td>
+        <td><a href="index.html" class="option">HOME</a></td>
+        <td><a href="resume.html" class="option">RESUME</a></td>
+        <td><a href="projects.html" class="option">PROJECTS</a></td>
+        <td><a href="contact.html" class="option">CONTACT</a></td>
+        <td><a href="gallery.html" class="option">GALLERY</a></td>
 
       </tr>
     </table>
   </div>
+  <div id="desktopview">
+    <h2 class="fade-in" style="font-weight: bold; text-align:center;">WELCOME</h2>
+  </div>
 
+  <div id="mobileview" style="display: none;">
+    <h2 class="fade-in" style="font-weight: bold;text-align: center;">WELCOME</h2>
+  </div>
 
-  <br>
   <div class="header fade-in">
-    <h2 class="fade-in" style="font-weight: bold">Hello! I'm Chow Wen Jun</h2>
     <h3 class="fade-in" style="font-weight: bold">
+      Hello! My name is Chow Wen Jun.<br>
       Fresh Graduate with a Diploma in Information Technology from Taylor's College.
     </h3>
     <p>
@@ -70,10 +86,10 @@
       you just want to chat about tech.
     </p>
     <p class="greeting">Looking forward to connecting with you!</p>
-  </div>
-  <br>
 
-  <div class="header fade-in">
+    <br>
+
+
     <h3 class="fade-in" style="font-weight: bold">During my studies, I gained comprehensive knowledge and practical
       experience in several IT modules, including: </h3>
     <p style="font-style: italic;">Sources:<a
@@ -92,10 +108,10 @@
     </select>
     <table class="modules">
       &nbsp;
-      
-      
+
+
       <br>
-      
+
       <div>
         <tr id="content-dit" style="display:none;">
           <td colspan="2" style="padding:5px;">
@@ -181,9 +197,73 @@
           </td>
         </tr>
       </div>
+      <br>
+      <br>
     </table>
 
   </div>
+  
+  <footer>
+
+    <table class="footer" width="100%;">
+      <colgroup>
+        <col style="width:50%;">
+        <col style="width:50%;">
+
+
+      </colgroup>
+      <tr>
+        <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+          <span>FOLLOW ME</span>
+        </td>
+        <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+          <span>QUICK LINKS</span>
+
+        </td>
+
+      </tr>
+      <tr>
+        <td style="text-align: left;font-size: 25px;">
+          <p>
+            <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
+                class="fa-brands fa-linkedin"></i></a>
+
+            <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i class="fa-solid fa-envelope"></i></a>
+        </td>
+        <td style="text-align: left;">
+          <a href="index.html">Home</a>
+          <br>
+
+          <a href="resume.html">Resume</a>
+          <br>
+
+          <a href="projects.html">Projects</a>
+          <br>
+
+          <a href="contact.html">Contact</a>
+          <br>
+
+          <a href="gallery.html">Gallery</a>
+          <br>
+
+          <a href="aboutpage.html">About Page</a>
+
+
+
+
+
+        </td>
+
+
+      </tr>
+    </table>
+    <hr style="opacity: 0.5;">
+    <p class="copyright">
+      Copyright © 2023 All Rights Reserved by Chow Wen Jun
+    </p>
+
+  </footer>
+
 
 
 
@@ -204,7 +284,7 @@
         document.getElementById("content-dit").style.display = "block";
         document.getElementById("content-bcs").style.display = "block";
       }
-     
+
     }
 
     function hideAllContent() {
@@ -215,12 +295,12 @@
     }
 
     function resetSelect() {
-    var selectElement = document.getElementById("optionSelect");
-    selectElement.selectedIndex = 0; 
-  }
+      var selectElement = document.getElementById("optionSelect");
+      selectElement.selectedIndex = 0;
+    }
 
-  
-  window.onload = resetSelect;
+
+    window.onload = resetSelect;
   </script>
 
 </body>
@@ -228,6 +308,28 @@
 </html>
 
 <style>
+
+
+footer {
+    background-color: #a9a9a9;
+    padding: 5px;
+
+
+
+
+  }
+
+  .footer tr,
+  .footer td,
+  .footer a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
   .tableone,
   tr,
   td {
@@ -256,6 +358,15 @@
 
   }
 
+  h2 {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Saira', sans-serif;
+    font-family: 'Silkscreen', cursive;
+    font-size: 40px;
+  }
+
 
 
 
@@ -263,7 +374,6 @@
   .header {
     background-color: #cccccc;
     text-align: left;
-    border-radius: 10px;
     padding: 10px;
   }
 
@@ -334,7 +444,13 @@
     text-decoration: none;
   }
 
-  .options::before {
+  .option {
+    color: #18272f;
+    position: relative;
+    text-decoration: none;
+  }
+
+  .option::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -348,7 +464,7 @@
     transition: transform 0.3s ease-in-out;
   }
 
-  .options:hover::before {
+  .option:hover::before {
     transform-origin: left;
     transform: scaleX(1);
   }
@@ -400,8 +516,8 @@
 
     }
 
-    .modules button{
-      padding:10px;
+    .modules button {
+      padding: 10px;
     }
 
     #desktopview {
