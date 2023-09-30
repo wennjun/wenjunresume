@@ -6,6 +6,12 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400&family=Quicksand:wght@400;600&family=Rajdhani&family=Saira:ital,wght@0,400;1,100;1,200&family=Silkscreen&display=swap"
+    rel="stylesheet">
+
 
   <title>Projects</title>
   <link rel="icon" href="image1.jpg" type="image/jpg">
@@ -43,18 +49,23 @@
 
   </div>
   <br>
+  <div id="desktopview">
+    <h2 class="fade-in" style="font-weight: bold; text-align: center;">Projects</h2>
+  </div>
 
-
-
+  <div id="mobileview" style="display: none;">
+    <h2 class="fade-in" style="font-weight: bold; text-align: center;">Projects</h2>
+  </div>
   <div class="header fade-in">
-    <h2 class="fade-in" style="font-weight: bold">Projects</h2>
-    <span><b>Title:</b> Proposed System- TimeTime (Employee Clock-In &
-      Clock-Out)<br /></span>
-
-    <span><b>Course Module:</b>Web Development<br /></span><br />
-    <span><b>Technology Used:</b> PHP, HTML, CSS, Chart.js<br /></span>
-    <br>
     <div id="mobileview" style="display: none;">
+
+      <span><b>Title:</b> Proposed System- TimeTime (Employee Clock-In &
+        Clock-Out)<br /></span>
+
+      <span><b>Course Module:</b>Web Development<br /></span><br />
+      <span><b>Technology Used:</b> PHP, HTML, CSS, Chart.js<br /></span>
+      <br>
+
       <div class="slideshow-container" id="slideshow-container1">
         <div class="image active">
           <img src="groupphoto.JPG" alt="Group Image" style="width:100%; height:100%;">
@@ -71,6 +82,7 @@
       </div>
     </div>
     <div id="desktopview">
+
       <div class="timetimeimages" style="text-align: center;">
         <img src="groupphoto.JPG" alt="timetimeimages" width="400" height="300">
         <img src="presenting.JPG" alt="timetimeimages" width="400" height="300">
@@ -117,6 +129,7 @@
       </div>
     </div>
     <div id="desktopview">
+
       <div class="timetimeimages" style="text-align: center;">
         <img src="groupimage.JPG" alt="Arrivo" width="400" height="300">
         <img src="IMG_2957.jpg" alt="Arrivo" width="400" height="300">
@@ -133,50 +146,131 @@
     </p>
   </div>
 </body>
+<footer>
 
+  <table class="footer" width="100%;">
+    <colgroup>
+      <col style="width:50%;">
+      <col style="width:50%;">
+
+
+    </colgroup>
+    <tr>
+      <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+        <span>FOLLOW ME</span>
+      </td>
+      <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+        <span>QUICK LINKS</span>
+
+      </td>
+
+    </tr>
+    <tr>
+      <td style="text-align: left;font-size: 25px;">
+        <p>
+          <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
+              class="fa-brands fa-linkedin"></i></a>
+
+          <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i class="fa-solid fa-envelope"></i></a>
+      </td>
+      <td style="text-align: left;">
+        <a href="index.html">Home</a>
+        <br>
+
+        <a href="resume.html">Resume</a>
+        <br>
+
+        <a href="projects.html">Projects</a>
+        <br>
+
+        <a href="contact.html">Contact</a>
+        <br>
+
+        <a href="gallery.html">Gallery</a>
+        <br>
+
+        <a href="aboutpage.html">About Page</a>
+
+
+
+
+
+      </td>
+
+
+    </tr>
+  </table>
+  <hr style="opacity: 0.5;">
+  <p class="copyright">
+    Copyright © 2023 All Rights Reserved by Chow Wen Jun
+  </p>
+
+</footer>
 </html>
+
+
 <script>
   const slideshowContainers = document.querySelectorAll('.slideshow-container');
 
-slideshowContainers.forEach(container => {
-  let slideIndex = 0;
-  const slides = container.querySelectorAll('.image');
+  slideshowContainers.forEach(container => {
+    let slideIndex = 0;
+    const slides = container.querySelectorAll('.image');
 
-  function showSlide(n) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    slides[n].classList.add('active');
-  }
+    function showSlide(n) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[n].classList.add('active');
+    }
 
-  function changeSlide(n) {
-    slideIndex += n;
-    if (slideIndex >= slides.length) slideIndex = 0;
-    if (slideIndex < 0) slideIndex = slides.length - 1;
+    function changeSlide(n) {
+      slideIndex += n;
+      if (slideIndex >= slides.length) slideIndex = 0;
+      if (slideIndex < 0) slideIndex = slides.length - 1;
+      showSlide(slideIndex);
+    }
+
+    container.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
+    container.querySelector('.next').addEventListener('click', () => changeSlide(1));
+
     showSlide(slideIndex);
-  }
 
-  container.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
-  container.querySelector('.next').addEventListener('click', () => changeSlide(1));
+    let timer = setInterval(() => changeSlide(1), 5000);
 
-  showSlide(slideIndex);
+    let touchStartX = 0;
+    let touchEndX = 0;
 
-  let timer = setInterval(() => changeSlide(1), 5000);
+    container.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
 
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  container.addEventListener('touchstart', e => {
-    touchStartX = e.changedTouches[0].screenX;
+    container.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      if (touchEndX < touchStartX) changeSlide(1);
+      if (touchEndX > touchStartX) changeSlide(-1);
+    });
   });
-
-  container.addEventListener('touchend', e => {
-    touchEndX = e.changedTouches[0].screenX;
-    if (touchEndX < touchStartX) changeSlide(1);
-    if (touchEndX > touchStartX) changeSlide(-1);
-  });
-});
 </script>
 
 <style>
+footer {
+    background-color: #a9a9a9;
+    padding: 5px;
+
+
+
+
+  }
+
+  .footer tr,
+  .footer td,
+  .footer a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
   .tableone,
   tr,
   td {
@@ -189,7 +283,6 @@ slideshowContainers.forEach(container => {
   .header {
     background-color: #cccccc;
     text-align: left;
-    border-radius: 10px;
     padding: 10px;
   }
 
@@ -211,6 +304,15 @@ slideshowContainers.forEach(container => {
 
   .fade-in {
     animation: fadeIn 2s;
+  }
+
+  h2 {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Saira', sans-serif;
+    font-family: 'Silkscreen', cursive;
+    font-size: 40px;
   }
 
   html {
@@ -310,7 +412,7 @@ slideshowContainers.forEach(container => {
     tr,
     td {
       padding: 5px;
-      width: 100%;
+     
     }
 
     .header {
@@ -338,7 +440,6 @@ slideshowContainers.forEach(container => {
 
     #mobileview {
       display: block !important;
-      text-align: center;
 
 
     }
