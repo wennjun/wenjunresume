@@ -6,10 +6,156 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400&family=Quicksand:wght@400;600&family=Rajdhani&family=Saira:ital,wght@0,400;1,100;1,200&family=Silkscreen&display=swap"
+        rel="stylesheet">
 
     <title>Gallery</title>
     <link rel="icon" href="image1.jpg" type="image/jpg">
     <script src="https://kit.fontawesome.com/6311b05fbe.js" crossorigin="anonymous"></script>
+
+    <style>
+        footer {
+            background-color: #a9a9a9;
+            padding: 5px;
+
+
+
+
+        }
+
+        .footer tr,
+        .footer td,
+        .footer a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .copyright {
+            text-align: center;
+        }
+
+        .tableone,
+        tr,
+        td {
+            padding: 10px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        .fade-in {
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        html {
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        a {
+            color: #18272f;
+            position: relative;
+            text-decoration: none;
+        }
+
+        .header {
+            background-color: #cccccc;
+            text-align: left;
+        
+            padding: 10px;
+        }
+
+        a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            border-radius: 4px;
+            background-color: #18272f;
+            bottom: 0;
+            left: 0;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        a:hover::before {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+
+
+        }
+
+        .imageone img {
+            display: inline-block;
+
+        }
+
+        h2 {
+            font-family: 'Bai Jamjuree', sans-serif;
+            font-family: 'Quicksand', sans-serif;
+            font-family: 'Rajdhani', sans-serif;
+            font-family: 'Saira', sans-serif;
+            font-family: 'Silkscreen', cursive;
+            font-size: 40px;
+
+        }
+
+        @media screen and (max-width: 600px) {
+            #desktopview {
+                display: none;
+                font-family: 'Quicksand', sans-serif !important;
+
+            }
+
+            #mobileview {
+                display: block !important;
+                text-align: center;
+
+
+            }
+
+
+
+
+
+
+            select {
+                border-radius: 10px;
+                padding: 10px;
+                width: 100%;
+                font-size: 15px;
+
+
+
+
+            }
+
+            option {
+                font-size: 15px;
+
+            }
+
+        }
+    </style>
 </head>
 
 <body>
@@ -45,9 +191,10 @@
     <br>
 
     <div id="mobileview" style="display: none;">
+        <h2 class="fade-in" style="font-weight: bold;">Gallery</h2>
         <div class="header">
 
-            <h2 class="fade-in" style="font-weight: bold;">Gallery</h2>
+
             <p>Hello and thank you for venturing into the Gallery of my online resume! This is where
                 the milestones of my life are frozen in time, each image capturing a moment filled with learning,
                 growth,
@@ -87,17 +234,18 @@
     </div>
 
     <div id="desktopview">
+        <h2 class="fade-in" style="font-weight: bold; text-align: center;">Gallery</h2>
+
         <div class="header">
 
 
-            <h2 class="fade-in" style="font-weight: bold;">Gallery</h2>
             <p>Hello and thank you for venturing into the Gallery of my online resume! <br>This is where
                 the milestones of my life are frozen in time, each image capturing a moment filled with learning,
                 growth,
                 and sometimes, even challenges that pushed me beyond my limits.</p>
 
 
-            <div class="image"  style="text-align: center;">
+            <div class="image" style="text-align: center;">
                 <img src="groupimage.JPG" style="width:500; height:300px;">
                 <img src="groupphoto.JPG" style="width:500; height:300px;">
                 <img src="hr.jpg" style="width:500; height:300px;">
@@ -116,125 +264,65 @@
 
 
 </body>
+<footer>
+
+    <table class="footer" width="100%;">
+      <colgroup>
+        <col style="width:50%;">
+        <col style="width:50%;">
+  
+  
+      </colgroup>
+      <tr>
+        <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+          <span>FOLLOW ME</span>
+        </td>
+        <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+          <span>QUICK LINKS</span>
+  
+        </td>
+  
+      </tr>
+      <tr>
+        <td style="text-align: left;font-size: 25px;">
+          <p>
+            <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
+                class="fa-brands fa-linkedin"></i></a>
+  
+            <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i class="fa-solid fa-envelope"></i></a>
+        </td>
+        <td style="text-align: left;">
+          <a href="index.html">Home</a>
+          <br>
+  
+          <a href="resume.html">Resume</a>
+          <br>
+  
+          <a href="projects.html">Projects</a>
+          <br>
+  
+          <a href="contact.html">Contact</a>
+          <br>
+  
+          <a href="gallery.html">Gallery</a>
+          <br>
+  
+          <a href="aboutpage.html">About Page</a>
+  
+  
+  
+  
+  
+        </td>
+  
+  
+      </tr>
+    </table>
+    <hr style="opacity: 0.5;">
+    <p class="copyright">
+      Copyright © 2023 All Rights Reserved by Chow Wen Jun
+    </p>
+  
+  </footer>
 
 </html>
-
-
-
-
-
-<style>
-    .tableone,
-    tr,
-    td {
-        padding: 10px;
-        text-align: center;
-        border-collapse: collapse;
-    }
-
-    .fade-in {
-        animation: fadeIn 2s;
-    }
-
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    html {
-                font-family: Arial, Helvetica, sans-serif;
-
-        background-color: white;
-    }
-
-    a {
-        color: #18272f;
-        position: relative;
-        text-decoration: none;
-    }
-
-    .header {
-        background-color: #cccccc;
-        text-align: left;
-        border-radius: 10px;
-        padding: 10px;
-    }
-
-    a::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        border-radius: 4px;
-        background-color: #18272f;
-        bottom: 0;
-        left: 0;
-        transform-origin: right;
-        transform: scaleX(0);
-        transition: transform 0.3s ease-in-out;
-    }
-
-    a:hover::before {
-        transform-origin: left;
-        transform: scaleX(1);
-    }
-
-    .image img {
-        max-width: 100%;
-        height: auto;
-      
-
-    }
-
-    .imageone img {
-        display: inline-block;
-
-    }
-
-    @media screen and (max-width: 600px) {
-        #desktopview {
-            display: none;
-        }
-
-        #mobileview {
-            display: block !important;
-            text-align: center;
-
-
-
-
-        }
-
-
-
-
-
-        select {
-            border-radius: 10px;
-            padding: 10px;
-            width: 100%;
-            font-size: 15px;
-
-
-
-
-        }
-
-        option {
-            font-size: 15px;
-
-        }
-
-    }
-</style>
-
-
-
-
-
-</style>
