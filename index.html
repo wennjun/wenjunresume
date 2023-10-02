@@ -6,11 +6,17 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Tamil&display=swap" rel="stylesheet">
+
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400&family=Quicksand:wght@400;600&family=Rajdhani&family=Saira:ital,wght@0,400;1,100;1,200&family=Silkscreen&display=swap"
+    rel="stylesheet">
+    
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-  href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400&family=Quicksand:wght@400;600&family=Rajdhani&family=Saira:ital,wght@0,400;1,100;1,200&family=Silkscreen&display=swap"
-  rel="stylesheet">
   <title>Home</title>
   <link rel="icon" href="image1.jpg" type="image/jpg">
   <script src="https://kit.fontawesome.com/6311b05fbe.js" crossorigin="anonymous"></script>
@@ -40,7 +46,9 @@
     <table class="tableone" width="100%;">
       <tr>
         <td style="width:55%;">
-
+          <header class="animated-header">
+            Designed and developed by <span class="animated-text">Chow Wen Jun</span>
+          </header>
         </td>
         <td><a href="index.html" class="option">HOME</a></td>
         <td><a href="resume.html" class="option">RESUME</a></td>
@@ -202,7 +210,7 @@
     </table>
 
   </div>
-  
+
   <footer>
 
     <table class="footer" width="100%;">
@@ -308,9 +316,7 @@
 </html>
 
 <style>
-
-
-footer {
+  footer {
     background-color: #a9a9a9;
     padding: 5px;
 
@@ -401,6 +407,45 @@ footer {
 
     50% {
       border-color: transparent;
+    }
+  }
+
+  .animated-header {
+    color: #222222;
+    /* Corrected the color code */
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    font-family: 'Anek Tamil', sans-serif;
+  }
+
+  .animated-text {
+    display: inline-block;
+    white-space: nowrap;
+    /* Fixed the typo */
+    overflow: hidden;
+    animation: flowingText 3s infinite alternate;
+    margin-left: 5px;
+    max-width: 0;
+  }
+
+  @keyframes flowingText {
+    0% {
+      max-width: 0;
+    }
+
+    100% {
+      max-width: 200px;
+    }
+  }
+
+  @keyframes flowingText {
+    0% {
+      max-width: 0;
+    }
+
+    100% {
+      max-width: 200px;
     }
   }
 
