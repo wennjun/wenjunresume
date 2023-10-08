@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400&family=Quicksand:wght@400;600&family=Rajdhani&family=Saira:ital,wght@0,400;1,100;1,200&family=Silkscreen&display=swap" rel="stylesheet">
 
+<link href="https://fonts.googleapis.com/css2?family=Anek+Tamil&display=swap" rel="stylesheet">
 
   <title>Resume</title>
   <link rel="icon" href="image1.jpg" type="image/jpg">
@@ -40,7 +41,9 @@
     <table class="tableone" width="100%;">
       <tr>
         <td style="width:55%;">
-
+          <header class="animated-header">
+            Designed and developed by <span class="animated-text">Chow Wen Jun</span>
+          </header>
         </td>
         <td><a href="index.html" class="option">HOME</a></td>
         <td><a href="resume.html" class="option">RESUME</a></td>
@@ -53,7 +56,13 @@
 
   </div>
   <br>
+  
   <h2 class="fade-in" style="font-weight: bold; text-align:center;">Resume</h2>
+  <div id="mobileview" style="display: none;">
+    <header class="animated-header">
+      Designed and developed by <span class="animated-text">Chow Wen Jun</span>
+    </header>
+  </div>
   <div class="header fade-in">
     <a href="PDF_CHOWWENJUNRESUME.pdf" download>
       <button class="button" onclick="downloadPDF()">Download as PDF</button>
@@ -289,6 +298,46 @@
 
 
 
+  }
+
+  .animated-header {
+    color: #222222;
+    /* Corrected the color code */
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    font-family: 'Anek Tamil', sans-serif;
+    vertical-align:top;
+  }
+
+  .animated-text {
+    display: inline-block;
+    white-space: nowrap;
+    /* Fixed the typo */
+    overflow: hidden;
+    animation: flowingText 3s infinite alternate;
+    margin-left: 5px;
+    max-width: 0;
+  }
+
+  @keyframes flowingText {
+    0% {
+      max-width: 0;
+    }
+
+    100% {
+      max-width: 200px;
+    }
+  }
+
+  @keyframes flowingText {
+    0% {
+      max-width: 0;
+    }
+
+    100% {
+      max-width: 200px;
+    }
   }
 
   .footer tr,
