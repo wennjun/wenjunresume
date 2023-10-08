@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400&family=Quicksand:wght@400;600&family=Rajdhani&family=Saira:ital,wght@0,400;1,100;1,200&family=Silkscreen&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Tamil&display=swap" rel="stylesheet">
 
     <title>Gallery</title>
     <link rel="icon" href="image1.jpg" type="image/jpg">
@@ -20,11 +21,47 @@
         footer {
             background-color: #a9a9a9;
             padding: 5px;
-
-
-
-
         }
+
+        .animated-header {
+    color: #222222;
+    /* Corrected the color code */
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    font-family: 'Anek Tamil', sans-serif;
+    vertical-align:top;
+  }
+
+  .animated-text {
+    display: inline-block;
+    white-space: nowrap;
+    /* Fixed the typo */
+    overflow: hidden;
+    animation: flowingText 3s infinite alternate;
+    margin-left: 5px;
+    max-width: 0;
+  }
+
+  @keyframes flowingText {
+    0% {
+      max-width: 0;
+    }
+
+    100% {
+      max-width: 200px;
+    }
+  }
+
+  @keyframes flowingText {
+    0% {
+      max-width: 0;
+    }
+
+    100% {
+      max-width: 200px;
+    }
+  }
 
         .footer tr,
         .footer td,
@@ -74,7 +111,7 @@
         .header {
             background-color: #cccccc;
             text-align: left;
-        
+
             padding: 10px;
         }
 
@@ -175,7 +212,9 @@
         <table class="tableone" width="100%;">
             <tr>
                 <td style="width:55%;">
-
+                    <header class="animated-header">
+                        Designed and developed by <span class="animated-text">Chow Wen Jun</span>
+                      </header>
                 </td>
                 <td><a href="index.html">HOME</a></td>
                 <td><a href="resume.html">RESUME</a></td>
@@ -192,6 +231,9 @@
 
     <div id="mobileview" style="display: none;">
         <h2 class="fade-in" style="font-weight: bold;">Gallery</h2>
+        <header class="animated-header">
+            Designed and developed by <span class="animated-text">Chow Wen Jun</span>
+          </header>
         <div class="header">
 
 
@@ -267,62 +309,62 @@
 <footer>
 
     <table class="footer" width="100%;">
-      <colgroup>
-        <col style="width:50%;">
-        <col style="width:50%;">
-  
-  
-      </colgroup>
-      <tr>
-        <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
-          <span>FOLLOW ME</span>
-        </td>
-        <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
-          <span>QUICK LINKS</span>
-  
-        </td>
-  
-      </tr>
-      <tr>
-        <td style="text-align: left;font-size: 25px;">
-          <p>
-            <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
-                class="fa-brands fa-linkedin"></i></a>
-  
-            <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i class="fa-solid fa-envelope"></i></a>
-        </td>
-        <td style="text-align: left;">
-          <a href="index.html">Home</a>
-          <br>
-  
-          <a href="resume.html">Resume</a>
-          <br>
-  
-          <a href="projects.html">Projects</a>
-          <br>
-  
-          <a href="contact.html">Contact</a>
-          <br>
-  
-          <a href="gallery.html">Gallery</a>
-          <br>
-  
-          <a href="aboutpage.html">About Page</a>
-  
-  
-  
-  
-  
-        </td>
-  
-  
-      </tr>
+        <colgroup>
+            <col style="width:50%;">
+            <col style="width:50%;">
+
+
+        </colgroup>
+        <tr>
+            <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+                <span>FOLLOW ME</span>
+            </td>
+            <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+                <span>QUICK LINKS</span>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td style="text-align: left;font-size: 25px;">
+                <p>
+                    <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
+                            class="fa-brands fa-linkedin"></i></a>
+
+                    <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i class="fa-solid fa-envelope"></i></a>
+            </td>
+            <td style="text-align: left;">
+                <a href="index.html">Home</a>
+                <br>
+
+                <a href="resume.html">Resume</a>
+                <br>
+
+                <a href="projects.html">Projects</a>
+                <br>
+
+                <a href="contact.html">Contact</a>
+                <br>
+
+                <a href="gallery.html">Gallery</a>
+                <br>
+
+                <a href="aboutpage.html">About Page</a>
+
+
+
+
+
+            </td>
+
+
+        </tr>
     </table>
     <hr style="opacity: 0.5;">
     <p class="copyright">
-      Copyright © 2023 All Rights Reserved by Chow Wen Jun
+        Copyright © 2023 All Rights Reserved by Chow Wen Jun
     </p>
-  
-  </footer>
+
+</footer>
 
 </html>
