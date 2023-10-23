@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+
+    <title>About Page</title>
+    <link rel="icon" href="image1.jpg" type="image/jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Tamil&family=Inter:wght@500&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6311b05fbe.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <style>
+        button {
+            padding: 10px;
+            border: 1px solid black;
+            text-align: right;
+
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid black;
+            width: 100%;
+            font-size: small;
+        }
+
+        input[type="email"] {
+            padding: 10px;
+            border: 1px solid black;
+            width: 100%;
+            font-size: small;
+
+        }
+
+        textarea {
+            padding: 10px;
+            border: 1px solid black;
+            width: 100%;
+            font-size: small;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+
+
+
+
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+
+        .containerinside {
+            text-align: left;
+            margin: auto;
+            font-size: 15px;
+            background-color: #d3d3d3;
+            height: 380px;
+            padding: 10px;
+            width: 250px;
+            font-family: 'Courier New', monospace;
+
+
+        }
+
+        .icon {
+            font-size: 25px;
+            text-align: center;
+            color: black;
+
+        }
+
+        .option {
+            color: #18272f;
+            position: relative;
+            text-decoration: none;
+        }
+
+        .option::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            border-radius: 4px;
+            background-color: #18272f;
+            bottom: 0;
+            left: 0;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .option:hover::before {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+        .tableone,
+        tr,
+        td {
+            padding: 10px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        p {
+            font-family: 'Anek Tamil', sans-serif;
+            font-family: 'Inter', sans-serif;
+        }
+
+        span {
+            font-family: 'Anek Tamil', sans-serif;
+            font-family: 'Inter', sans-serif;
+
+        }
+
+
+
+        select {
+            border-radius: 10px;
+            padding: 5px;
+            font-size: 15px;
+            width: 100%;
+
+        }
+
+        .content {
+            padding: 10px;
+
+        }
+
+        footer {
+            background-color: #a9a9a9;
+
+            padding: 10px;
+
+
+        }
+
+        .animation {
+            animation: 5s animation ease-out ;
+            font-size: 25px;
+            text-decoration: underline;
+        }
+
+
+        @keyframes animation {
+            0% {
+                opacity: 0;
+                transform: translateY(80%);
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+        .animationone {
+            animation: 5s animationone ease-out;
+            font-size: 20px;
+        }
+
+
+        @keyframes animationone {
+            0% {
+                opacity: 0;
+                transform: translateY(80%);
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+        .animationtwo {
+            animation: 8s animationtwo ease-out;
+            font-size: 20px;
+        }
+
+
+        @keyframes animationtwo {
+            0% {
+                opacity: 0;
+                transform: translateY(80%);
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+
+
+
+
+        .footer tr,
+        .footer td,
+        .footer a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .copyright {
+            text-align: center;
+        }
+
+        .github {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        .tableimage tr td {
+
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+
+
+
+        }
+
+        img {
+
+            margin-left: auto;
+            margin-right: 15px;
+        }
+
+        .sizing{
+            margin:25px;
+        }
+
+        .centerimages {
+            text-align: center !important;
+        }
+
+
+
+
+
+
+
+        @media screen and (max-width: 600px) {
+
+            img {
+                max-width: 100%;
+                height: auto;
+                max-width: 100%;
+             
+
+            }
+
+            .containerinside {
+                width: 100%;
+                height: auto;
+            }
+
+            #desktopview {
+                display: none;
+            }
+
+            #mobileview {
+                display: block !important;
+            }
+        }
+
+
+
+
+
+        /* First inner container */
+    </style>
+</head>
+
+<body>
+    <colgroup>
+        <col style="width: 25%" />
+        <col style="width: 25%" />
+        <col style="width: 25%" />
+        <col style="width: 25%" />
+    </colgroup>
+
+    <div id="mobileview" style="display: none;">
+        <select class="option" onchange="location = this.value;">
+
+            <option value="index.html">HOME</option>
+            <option value="resume.html">RESUME</option>
+            <option value="projects.html">PROJECTS</option>
+            <option value="contact.html" selected>CONTACT</option>
+            <option value="gallery.html">GALLERY</option>
+            <option value="aboutpage.html">ABOUT PAGE</option>
+
+        </select>
+    </div>
+
+
+    <div id="desktopview">
+        <table class="tableone" width="100%;">
+            <tr>
+                <td style="width:55%;">
+
+                </td>
+                <td><a href="index.html" class="option">HOME</a></td>
+                <td><a href="resume.html" class="option">RESUME</a></td>
+                <td><a href="projects.html" class="option">PROJECTS</a></td>
+                <td><a href="contact.html" class="option">CONTACT</a></td>
+                <td><a href="gallery.html" class="option">GALLERY</a></td>
+                <td><a href="aboutpage.html" class="option">ABOUT PAGE</a></td>
+
+
+            </tr>
+        </table>
+
+    </div>
+
+
+    <div class="content">
+        <p style="font-weight: bold; font-size: 20px; display:none;" class="animation" id="mobileview">This website is
+            fully develop and design by Chow Wen Jun.</p>
+
+        <p style="font-weight: bold;" class="animation" id="desktopview">This website is fully develop and design by
+            Chow Wen Jun.</p>
+        <p style="font-weight:bold;" class="animationone">Hosting Platform :</p>
+        <img src="githubone.png" alt="Github" width="500px" height="200px" class="github animationone"
+            style="text-align: center;">
+        <p class="animationtwo">Special thanks to <b>GitHub</b> for hosting this website. All code was meticulously
+            crafted and written by
+            Chow Wen
+            Jun.</p>
+        <span style="font-weight: bold;" class="animationone">References:
+        </span>
+        <p class="animationtwo">
+            Portions of the code on this website were inspired by or adapted from resources available on platform below,
+            which
+            served as an invaluable educational tool during the development process!<br>
+        </p>
+        <table class="tableimage">
+            <colgroup>
+                <col style="width:25%;">
+                <col style="width:25%;">
+                <col style="width:25%;">
+                <col style="width:25%;">
+
+
+            </colgroup>
+        </table>
+        <tr>
+            <td class="centerimages">
+
+                <img src="wthreeschool.png" alt="w3school" width="100px" height="100px" class="animationtwo"style="margin-left:20px;">
+
+                <img src="stackoverflow_logo.png" alt="stackover" width="250px" height="50px" class="animationtwo sizing">
+
+                <img src="codepenlogo.png" alt="codepen" width="250px" height="50px" class="animationtwo" style="margin:20px;">
+                <br><br>
+            </td>
+            <td>
+
+                <span style="font-weight:bold;" class="animationone">Icons Platform:</span><br><br>
+
+                <img src="flaticon_logo.png" alt="codepen" width="250px" height="50px" class="animationtwo sizing">
+                <br>
+            </td>
+            <br>
+        </tr>
+
+        <tr>
+            <td>
+                <span style="font-weight:bold;" class="animationone">Font Platforms:</span><br><br>
+                <img src="fontawe.png" alt="codepen" width="375px" height="50px" class="animationtwo sizing">
+
+
+                <img src="googlefontstrans.png" alt="codepen" width="350px" height="50px" class="animationtwo sizing">
+
+            </td>
+        </tr>
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <footer>
+
+        <table class="footer" width="100%;">
+            <colgroup>
+                <col style="width:50%;">
+                <col style="width:50%;">
+
+
+            </colgroup>
+            <tr>
+                <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+                    <span>FOLLOW ME</span>
+                </td>
+                <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+                    <span>QUICK LINKS</span>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td style="text-align: left;font-size: 25px;">
+                    <p>
+                        <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
+                                class="fa-brands fa-linkedin"></i></a>
+
+                        <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i
+                                class="fa-solid fa-envelope"></i></a>
+                </td>
+                <td style="text-align: left;">
+                    <a href="index.html">Home</a>
+                    <br>
+
+                    <a href="resume.html">Resume</a>
+                    <br>
+
+                    <a href="projects.html">Projects</a>
+                    <br>
+
+                    <a href="contact.html">Contact</a>
+                    <br>
+
+                    <a href="gallery.html">Gallery</a>
+                    <br>
+
+                    <a href="aboutpage.html">About Page</a>
+
+
+
+
+
+                </td>
+
+
+            </tr>
+        </table>
+        <hr style="opacity: 0.5;">
+        <p class="copyright">
+            Copyright © 2023 All Rights Reserved by Chow Wen Jun
+        </p>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
