@@ -64,12 +64,13 @@
     <br>
 
     <h2 class="fade-in" style="font-weight: bold; text-align:center;">Resume</h2>
+    
     <div id="mobileview" style="display: none;">
         <header class="animated-header">
             Designed and developed by <span class="animated-text">Chow Wen Jun</span>
         </header>
     </div>
-    
+   
     <div class="header fade-in">
         <a href="CHOWWENJUNRESUME.pdf" download>
             <button class="button" onclick="downloadPDF()">Download as PDF</button>
@@ -78,6 +79,7 @@
 
         <br>
         <br>
+        
         <span style="font-size: 25px; font-weight: bold">CHOW WEN JUN </span>
         <br>
 
@@ -92,8 +94,7 @@
 
 
         <br />
-        <span style="font-weight: bold; text-decoration: underline;">Mobile View Fixing is in progress</span>
-        <br><br>
+        <span style="font-weight: bold; text-decoration: underline;">Mobile View Fixing is in progress</span><br>
         <span style="font-size: 20px; font-weight: bold; text-decoration: underline">OBJECTIVES</span>
         <p>
             As a fresh grad with an IT Diploma, I know my way around programming,
@@ -218,6 +219,10 @@
                 <col style="width:20%">
                 <col style="width:80%">
 
+                
+                
+             
+
             </colgroup>
 
             <tr>
@@ -276,6 +281,8 @@
                 <td>
                     Presenting
                 </td>
+             
+                
             </tr>
 
 
@@ -607,21 +614,19 @@
     }
 
     .examresult {
-        width: 700px;
+        width: 100%;
         border-collapse: collapse;
-        
-        
-        
+        display: block;
+
+
+
 
 
     }
 
-    .examresult tr td {
-        padding: 5px;
-        
-    }
+    
 
-   
+
 
     .gpa {
         position: relative;
@@ -629,7 +634,7 @@
         cursor: pointer;
     }
 
-    footer{
+    footer {
         width: 86%;
         /* or max-width if you prefer */
         margin-left: auto;
@@ -707,8 +712,10 @@
     .footer a {
         text-decoration: none;
         color: black;
+  
     }
 
+  
     .copyright {
         text-align: center;
     }
@@ -859,37 +866,82 @@
         transform: scaleX(1);
     }
 
+
+
     @media screen and (max-width: 600px) {
-
-        .tableone,
-        tr,
-        td {
-            padding: 5px;
-
-        }
-
-        #desktopview {
-            display: none;
-        }
-
-
-        #mobileview {
-            display: block !important;
-            text-align: center;
-
-        }
-
-        select {
-            border-radius: 10px;
-            padding: 10px;
-            font-size: 15px;
-            width: 100%;
-        }
-
-        option {
-            font-size: 15px;
-
-        }
-
+    .header, .footer {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
     }
+
+    footer{
+        width:100%;
+    }
+
+ 
+
+    .tableone, .examresult, .footer {
+        width: 100%;
+    }
+
+    .tableedu, .examresult tr td, .footer tr td {
+        padding: 5px;
+    }
+
+    h2, .fade-in, .option, .button, .gpa .gpacontent {
+        font-size: smaller;
+    }
+
+    .gpa .gpacontent {
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    #desktopview {
+        display: none;
+    }
+
+    #mobileview {
+        display: block;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .icon, i {
+        font-size: 24px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    /* Adjust table layouts */
+    .tableedu, .examresult {
+        display: block;
+/* Allows table to scroll horizontally if needed */
+    }
+
+    /* Ensure links and buttons are easily clickable */
+    .option, .button, a.icon {
+        padding: 10px;
+        margin: 5px;
+        font-size: larger; /* Increase font size for better readability */
+    
+}
+
+}
+
 </style>
