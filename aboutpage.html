@@ -58,9 +58,15 @@
 
 
 
-        html {
-            font-family: Arial, Helvetica, sans-serif;
-        }
+        html{
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings:
+            "slnt" 0;
+    }
+
 
 
 
@@ -133,6 +139,7 @@
             padding: 10px;
             text-align: center;
             border-collapse: collapse;
+            font-size: small;
         }
 
         *,
@@ -346,12 +353,7 @@
 </head>
 
 <body>
-    <colgroup>
-        <col style="width: 25%" />
-        <col style="width: 25%" />
-        <col style="width: 25%" />
-        <col style="width: 25%" />
-    </colgroup>
+
 
     <div id="mobileview" style="display: none;">
         <select class="option" onchange="location = this.value;">
@@ -359,7 +361,6 @@
             <option value="index.html">HOME</option>
             <option value="resume.html">RESUME</option>
             <option value="projects.html">PROJECTS</option>
-            <option value="contact.html">CONTACT</option>
             <option value="aboutpage.html" selected>ABOUT</option>
 
         </select>
@@ -369,16 +370,13 @@
     <div id="desktopview">
         <table class="tableone" width="100%;">
             <tr>
-                <td style="width:50%;">
-
-                </td>
+                <td style="width:25%;"></td>
+           
                 <td><a href="index.html" class="option">HOME</a></td>
                 <td><a href="resume.html" class="option">RESUME</a></td>
                 <td><a href="projects.html" class="option">PROJECTS</a></td>
-                <td><a href="contact.html" class="option">CONTACT</a></td>
                 <td><a href="aboutpage.html" class="option">ABOUT</a></td>
-
-
+                <td style="width:25%;"></td>
             </tr>
         </table>
 
