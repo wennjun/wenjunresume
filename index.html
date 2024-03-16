@@ -49,7 +49,7 @@
         <table class="tableone" width="100%;">
             <tr>
                 <td style="width:25%;"></td>
-           
+
                 <td><a href="index.html" class="option">HOME</a></td>
                 <td><a href="resume.html" class="option">RESUME</a></td>
                 <td><a href="projects.html" class="option">PROJECTS</a></td>
@@ -60,9 +60,9 @@
 
     </div>
     <br>
-    <div id="desktopview">
         <h2 class="fade-in" style="font-weight: bold; text-align:center;">Hello and Welcome! </h2>
-    </div>
+  
+    
 
 
 
@@ -96,59 +96,41 @@
 
     </div>
 
-    <footer>
-
-        <table class="footer" width="100%;">
+    <footer class="site-footer">
+        <table style="padding:20px;" width="100%;">
             <colgroup>
                 <col style="width:50%;">
                 <col style="width:50%;">
-
-
             </colgroup>
+            <hr style="opacity: 0.5;">
+
             <tr>
                 <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
                     <span>FOLLOW ME</span>
                 </td>
                 <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
                     <span>QUICK LINKS</span>
-
                 </td>
-
             </tr>
             <tr>
-                <td style="text-align: left;font-size: 25px;">
-                    <p>
-                        <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
-                                class="fa-brands fa-linkedin"></i></a>
-
-                        <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i
-                                class="fa-solid fa-envelope"></i></a>
+                <td style="text-align: left; font-size: 25px;">
+                    <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i class="fa-solid fa-envelope"></i></a>
                 </td>
                 <td style="text-align: left;">
-                    <a href="index.html">Home</a>
-                    <br>
-                    <a href="resume.html">Resume</a>
-                    <br>
-                    <a href="projects.html">Projects</a>
-                    <br>
-                    <a href="aboutpage.html">About Page</a>
-
-
-
-
-
+                    <a href="index.html">Home</a><br>
+                    <a href="resume.html">Resume</a><br>
+                    <a href="projects.html">Projects</a><br>
+                    <a href="aboutpage.html">About</a>
                 </td>
-
-
             </tr>
         </table>
         <hr style="opacity: 0.5;">
         <p class="copyright">
-            Copyright © 2023 All Rights Reserved by Chow Wen Jun
+            Copyright © 2024 All Rights Reserved by Chow Wen Jun
         </p>
-
     </footer>
-
 
 
 
@@ -251,23 +233,28 @@
         font-size: medium;
     }
 
-    footer {
-        background-color: #a9a9a9;
-        padding: 5px;
-        width: 86%;
-        /* or max-width if you prefer */
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 10px;
+    .site-footer a {
+        text-decoration: none;
+        color: black;
+    }
 
-    
 
- 
-   
+    .site-footer {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 60px;
+        width: 100%;
 
-     }
 
- 
+    }
+
+
+    .copyright {
+        text-align: center;
+        font-weight: bold;
+    }
+
 
 
     @keyframes typing {
@@ -421,7 +408,7 @@
             "slnt" 0;
     }
 
-    html{
+    html {
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
         font-weight: 500;
