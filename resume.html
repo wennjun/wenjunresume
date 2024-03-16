@@ -39,7 +39,7 @@
         <table class="tableone" width="100%;">
             <tr>
                 <td style="width:25%;"></td>
-           
+
                 <td><a href="index.html" class="option">HOME</a></td>
                 <td><a href="resume.html" class="option">RESUME</a></td>
                 <td><a href="projects.html" class="option">PROJECTS</a></td>
@@ -52,10 +52,10 @@
     <br>
 
     <h2 class="fade-in" style="font-weight: bold; text-align:center;">Resume</h2>
-    
-   
-   
-    <div class="header fade-in" >
+
+
+
+    <div class="header fade-in">
         <a href="CHOWWENJUNRESUME.pdf" download>
             <button class="button" onclick="downloadPDF()">Download as PDF</button>
         </a>
@@ -63,7 +63,7 @@
 
         <br>
         <br>
-        
+
         <span style="font-size: 20px; font-weight: bold">CHOW WEN JUN </span>
         <br>
 
@@ -86,12 +86,11 @@
             more.
         </p>
 
-        <span style="font-size: 12px; font-weight: bold; text-decoration: underline">EDUCATION</span>
+        <span style="font-weight: bold; text-decoration: underline">EDUCATION</span>
         <table class="tableedu">
             <tr>
                 <td style="width: 255px;">
-                    <img src="taylors.png" alt="Taylor's Logo" width="224.5" height="69.5"
-                        >
+                    <img src="taylors.png" alt="Taylor's Logo" width="224.5" height="69.5">
                 </td>
                 <td style="width: 957px;">
 
@@ -109,7 +108,7 @@
                 </td>
             </tr>
         </table>
-        <span style="font-size: 12px; font-weight: bold; text-decoration: underline">SKILLS</span>
+        <span style="font-weight: bold; text-decoration: underline">SKILLS</span>
         <ul>
             <li>Problem Solving</li>
             <li>Communication</li>
@@ -196,15 +195,15 @@
 
         <span style=" font-weight:bold;">Bachelor of Computer Science (Honours)</span>
 
-        <table border="1" class="examresult" >
+        <table border="1" class="examresult">
 
             <colgroup>
                 <col style="width:20%">
                 <col style="width:550px">
 
-                
-                
-             
+
+
+
 
             </colgroup>
 
@@ -264,8 +263,8 @@
                 <td>
                     Presenting
                 </td>
-             
-                
+
+
             </tr>
 
 
@@ -509,57 +508,40 @@
 
 
 
-    <footer>
-
-        <table class="footer" width="100%;">
+    <footer class="site-footer">
+        <table style="width:100%;">
             <colgroup>
                 <col style="width:50%;">
                 <col style="width:50%;">
-
-
             </colgroup>
+            <hr style="opacity: 0.5;">
+
             <tr>
                 <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
                     <span>FOLLOW ME</span>
                 </td>
                 <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
                     <span>QUICK LINKS</span>
-
                 </td>
-
             </tr>
             <tr>
-                <td style="text-align: left;font-size: 25px;">
-                    <p>
-                        <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
-                                class="fa-brands fa-linkedin"></i></a>
-
-                        <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i
-                                class="fa-solid fa-envelope"></i></a>
+                <td style="text-align: left; font-size: 25px;">
+                    <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i class="fa-solid fa-envelope"></i></a>
                 </td>
                 <td style="text-align: left;">
-                    <a href="index.html">Home</a>
-                    <br>
-                    <a href="resume.html">Resume</a>
-                    <br>
-                    <a href="projects.html">Projects</a>
-                    <br>
-                    <a href="aboutpage.html">About Page</a>
-
-
-
-
-
+                    <a href="index.html">Home</a><br>
+                    <a href="resume.html">Resume</a><br>
+                    <a href="projects.html">Projects</a><br>
+                    <a href="aboutpage.html">About</a>
                 </td>
-
-
             </tr>
         </table>
         <hr style="opacity: 0.5;">
         <p class="copyright">
-            Copyright © 2023 All Rights Reserved by Chow Wen Jun
+            Copyright © 2024 All Rights Reserved by Chow Wen Jun
         </p>
-
     </footer>
 
 
@@ -578,16 +560,11 @@
 </script>
 
 <style>
-    footer {
-        background-color: #a9a9a9;
-        padding: 5px;
-    }
-
     .tableedu tr td {
         text-align: left;
     }
 
-    
+
 
 
 
@@ -597,13 +574,7 @@
         cursor: pointer;
     }
 
-    footer {
-        width: 86%;
-        /* or max-width if you prefer */
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 10px;
-    }
+
 
     .gpa .gpacontent {
         visibility: hidden;
@@ -670,18 +641,10 @@
         }
     }
 
-    .footer tr,
-    .footer td,
-    .footer a {
-        text-decoration: none;
-        color: black;
-  
-    }
 
-  
-    .copyright {
-        text-align: center;
-    }
+
+
+    
 
     .tableone,
     tr,
@@ -696,6 +659,31 @@
         color: black;
         border-collapse: collapse;
     }
+
+
+    .site-footer a {
+        text-decoration: none;
+        color: black;
+    }
+
+
+    .site-footer {
+        left: 0;
+        bottom: 0;
+       
+        width: 100%;
+
+
+    }
+
+    .copyright {
+        text-align: center;
+        font-weight: bold;
+        
+    
+    
+    }
+
 
 
 
@@ -769,10 +757,10 @@
         display: inline;
         color: #18272f;
 
-       
+
     }
 
-    
+
     .header {
         background-color: #cccccc;
         text-align: left;
@@ -801,7 +789,7 @@
         animation: fadeIn 2s;
     }
 
-    html{
+    html {
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
         font-weight: 500;
@@ -838,13 +826,13 @@
         transform: scaleX(1);
     }
 
-    img{
-       
+    img {
+
         padding-left: 0xp;
-        
+
     }
 
-    .header{
+    .header {
         font-size: medium;
     }
 
@@ -852,97 +840,97 @@
 
 
     @media screen and (max-width: 600px) {
-   
 
- 
 
-    .tableone, td .footer {
-        width: 100%;
-        
+
+
+
+        .tableedu,
+        .examresult tr td {
+            padding: 5px;
+            width: 100%;
+        }
+
+        .header {
+            font-size: 12px;
+            padding: 5px;
+        }
+
+
+
+        .gpa .gpacontent {
+            width: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+
+        #desktopview {
+            display: none;
+
+        }
+
+        #mobileview {
+            display: block !important;
+            text-align: center;
+
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .icon,
+        i {
+            font-size: 17px;
+        }
+
+        .tableedu img {
+            width: 160px;
+            height: 50px;
+            padding: 0px;
+        }
+
+
+
+
+        .button {
+            background-color: white;
+            color: black;
+            border: 2px solid #555555;
+            font-size: small;
+
+        }
+
+        .button:hover {
+            background-color: #555555;
+            color: white;
+        }
+
+
+        /* Adjust table layouts */
+        .tableedu,
+        .examresult {
+            display: block;
+            /* Allows table to scroll horizontally if needed */
+        }
+
+        html {
+            font-size: small;
+
+        }
+
+
+        .tableone,
+        tr,
+        td {
+            padding: 0px;
+        }
+
+
+
     }
-
-    .tableedu, .examresult tr td, .footer tr td {
-        padding: 5px;
-        width: 100%;
-    }
-
-    .header{
-        font-size:12px;
-        padding:5px;
-    }
-
- 
-
-    .gpa .gpacontent {
-        width: 90%;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        display: none;
-    }
-
-    #desktopview {
-        display: none;
-       
-    }
-
-    #mobileview {
-        display: block !important;
-        text-align: center;
-       
-    }
-
-    select {
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-    }
-
-    .icon, i {
-        font-size: 17px;
-    }
-
-    .tableedu img{
-        width:160px ;
-        height: 50px;
-        padding:0px;
-    }
-
-
-  
-
-    .button {
-        background-color: white;
-        color: black;
-        border: 2px solid #555555;
-        font-size: small;
-
-    }
-
-    .button:hover {
-        background-color: #555555;
-        color: white;
-    }
-
-
-    /* Adjust table layouts */
-    .tableedu, .examresult {
-        display: block;
-/* Allows table to scroll horizontally if needed */
-    }
-
-    html{
-        font-size: small;
-        
-    }
-    
-
-    .tableone, tr, td{
-        padding:0px;
-    }
-
-
-
-}
-
 </style>
