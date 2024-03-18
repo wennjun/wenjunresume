@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html>
-
-
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -157,6 +154,19 @@
     });
   });
 
+  document.querySelectorAll('.menus a').forEach(link => {
+  link.addEventListener('click', function() {
+    // Remove 'active' class from all links
+    document.querySelectorAll('.menus a').forEach(otherLink => {
+      otherLink.classList.remove('active');
+    });
+    
+    // Add 'active' class to clicked link
+    this.classList.add('active');
+  });
+});
+
+
 
 </script>
 
@@ -309,6 +319,11 @@
     text-align: center;
     font-weight: bold;
   }
+
+  .menus a.active {
+  background-color: #ccc; /* Example hover color */
+}
+
 
 
   @media only screen and (max-width: 600px) {
