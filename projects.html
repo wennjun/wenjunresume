@@ -21,35 +21,44 @@
     <script src="https://kit.fontawesome.com/6311b05fbe.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
 
 
-    <div id="mobileview" style="display: none;">
-        <select class="option" onchange="location = this.value;">
-            <option value="index.html">HOME</option>
-            <option value="resume.html">RESUME</option>
-            <option value="projects.html" selected>PROJECTS</option>
-            <option value="aboutpage.html">ABOUT</option>
 
-        </select>
-    </div>
+<div id="hamburger">
+    <button class="hammenu">☰</button>
 
 
-    <div id="desktopview">
-        <table class="tableone" width="100%;">
-            <tr>
-                <td style="width:25%;"></td>
+    <div class="menus">
 
-                <td><a href="index.html" class="option">HOME</a></td>
-                <td><a href="resume.html" class="option">RESUME</a></td>
-                <td><a href="projects.html" class="option">PROJECTS</a></td>
-                <td><a href="aboutpage.html" class="option">ABOUT</a></td>
-                <td style="width:25%;"></td>
-            </tr>
-        </table>
+        <a href="index.html" style="border-bottom: none;">Home</a>
+        <a href="resume.html" style="border-bottom: none;">Resume</a>
+        <a href="projects.html" style="border-bottom: none;">Projects</a>
+        <a href="aboutpage.html">About</a>
 
     </div>
-    <br>
+</div>
+
+
+
+<div id="desktopview">
+    <table class="tableone" width="100%;">
+        <tr>
+            <td style="width:25%;"></td>
+
+            <td><a href="index.html" class="option">HOME</a></td>
+            <td><a href="resume.html" class="option">RESUME</a></td>
+            <td><a href="projects.html" class="option">PROJECTS</a></td>
+            <td><a href="aboutpage.html" class="option">ABOUT</a></td>
+            <td style="width:25%;"></td>
+        </tr>
+    </table>
+
+</div>
+
+
+<div class="page-content">
+
+
     <div id="desktopview">
         <h2 class="fade-in" style="font-weight: bold; text-align: center;">Projects</h2>
     </div>
@@ -99,13 +108,16 @@
         <br>
         <span><b>Project Description:</b></span>
 
-        <p>During my studies in the Web Development module, my team and I decided to create a Clock-In Clock-Out System
+        <p>During my studies in the Web Development module, my team and I decided to create a Clock-In Clock-Out
+            System
             targeted at both employees and company administrators.
         </p>
-        <p>On the employee side, users can record their daily work attendance by clocking in and out. They can also view
+        <p>On the employee side, users can record their daily work attendance by clocking in and out. They can also
+            view
             their past attendance statistics, presented both graphically and in table format.</p>
         <p>On the administrator side, company administrators have access to the attendance histories of all their
-            employees. They can export this data in a CSV file format, which simplifies the process of record keeping
+            employees. They can export this data in a CSV file format, which simplifies the process of record
+            keeping
             and
             accurately calculating payroll. Administrators also have the ability to set working days for their
             employees.
@@ -154,43 +166,45 @@
             was designed for Arrivo Company, a local business in our community.
         </p>
     </div>
-</body>
-<br>
-<footer class="site-footer">
-    <table style="padding:20px;" width="100%;">
-        <colgroup>
-            <col style="width:50%;">
-            <col style="width:50%;">
-        </colgroup>
-        <hr style="opacity: 0.5;">
 
-        <tr>
-            <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
-                <span>FOLLOW ME</span>
-            </td>
-            <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
-                <span>QUICK LINKS</span>
-            </td>
-        </tr>
-        <tr>
-            <td style="text-align: left; font-size: 25px;">
-                <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
-                        class="fa-brands fa-linkedin"></i></a>
-                <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i class="fa-solid fa-envelope"></i></a>
-            </td>
-            <td style="text-align: left;">
-                <a href="index.html">Home</a><br>
-                <a href="resume.html">Resume</a><br>
-                <a href="projects.html">Projects</a><br>
-                <a href="aboutpage.html">About</a>
-            </td>
-        </tr>
-    </table>
-    <hr style="opacity: 0.5;">
-    <p class="copyright">
-        Copyright © 2024 All Rights Reserved by Chow Wen Jun
-    </p>
-</footer>
+
+    <br>
+    <footer class="site-footer">
+        <table style="padding:20px;" width="100%;">
+            <colgroup>
+                <col style="width:50%;">
+                <col style="width:50%;">
+            </colgroup>
+            <hr style="opacity: 0.5;">
+
+            <tr>
+                <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+                    <span>FOLLOW ME</span>
+                </td>
+                <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+                    <span>QUICK LINKS</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left; font-size: 25px;">
+                    <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i class="fa-solid fa-envelope"></i></a>
+                </td>
+                <td style="text-align: left;">
+                    <a href="index.html">Home</a><br>
+                    <a href="resume.html">Resume</a><br>
+                    <a href="projects.html">Projects</a><br>
+                    <a href="aboutpage.html">About</a>
+                </td>
+            </tr>
+        </table>
+        <hr style="opacity: 0.5;">
+        <p class="copyright">
+            Copyright © 2024 All Rights Reserved by Chow Wen Jun
+        </p>
+    </footer>
+</div>
 
 </html>
 
@@ -234,9 +248,80 @@
             if (touchEndX > touchStartX) changeSlide(-1);
         });
     });
+
+
+    //javascript for hamburger menu 
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        var menu = document.querySelector('.menus');
+        // Explicitly set the display style on page load
+        menu.style.display = 'none'; // Ensure this is set so that the toggle works on first click
+
+        document.querySelector('.hammenu').addEventListener('click', function () {
+            menu.style.display = (menu.style.display == 'none') ? 'block' : 'none';
+        });
+    });
+
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        var menu = document.querySelector('.menus');
+        var pageContent = document.querySelector('.page-content'); // Select the main content of your page
+
+        document.querySelector('.hammenu').addEventListener('click', function () {
+            if (menu.classList.contains('active')) {
+                menu.classList.remove('active');
+                pageContent.style.display = 'block'; // Show the content when menu is not active
+            } else {
+                menu.classList.add('active');
+                pageContent.style.display = 'none'; // Hide the content when menu is active
+            }
+        });
+    });
+
+    document.querySelectorAll('.menus a').forEach(link => {
+        link.addEventListener('click', function () {
+            // Remove 'active' class from all links
+            document.querySelectorAll('.menus a').forEach(otherLink => {
+                otherLink.classList.remove('active');
+            });
+
+            // Add 'active' class to clicked link
+            this.classList.add('active');
+        });
+    });
 </script>
 
 <style>
+    .hammenu {
+        display: none;
+        /* Hide hamburger menu by default */
+        cursor: pointer;
+        padding: 10px;
+        font-size: 24px;
+        background-color: white;
+        border: none;
+        text-align: right;
+        width: 100%;
+
+    }
+
+    .menus {
+        display: none;
+        /* Hide menu by default */
+        padding: 10px;
+
+
+    }
+
+    .menus a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
     .site-footer a {
         text-decoration: none;
         color: black;
@@ -502,7 +587,17 @@
             font-size: small;
         }
 
-    
+        .hammenu {
+            display: block;
+            /* Show hamburger menu in mobile view */
+        }
+
+        #desktopview {
+            display: none;
+        }
+
+
+
 
 
     }
