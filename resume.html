@@ -60,6 +60,10 @@
             <button class="button" onclick="downloadPDF()">Download as PDF</button>
         </a>
 
+        <a href="wenjunresume.pdf" download>
+            <button class="button" onclick="downloadPDF()">Download as CV</button>
+        </a>
+
 
         <br>
         <br>
@@ -117,7 +121,7 @@
         </ul>
 
         <span style="font-weight: bold; text-decoration: underline">WORK EXPERIENCE</span>
-        <br /><br />
+        <br><br>
         <span style="font-weight: bold">INTERNSHIP- WEB DEVELOPER<br /></span>
 
         <span style="font-weight: bold">ORIGIN INTEGRATED STUDIOS<br /></span>
@@ -145,24 +149,6 @@
             </li>
         </ul>
 
-        <span style=" font-weight: bold">ONLINE BUSINESS</span><br />
-        <span style="font-weight: bold">APR 2020-MAR 2021</span><br />
-        <span style=" font-weight: bold">SHOPEE- XIAOCHIDAWEIWANG<br /></span>
-        <a href="https://shopee.com.my/xiaochidaweiwang" class="icon"><i class="fa-brands fa-chrome"></i></a>
-
-        <ul>
-            <li>
-                Process online order and arrange for delivery to ensure parcel reach
-                customer without issue.
-            </li>
-            <li>
-                Post delivery, follow up with customer, if issue arises, help to
-                address and resolve customer problem.
-            </li>
-            <li>Always ensure timeliness in replying customers queries.</li>
-            <li>Perform stock count at month end to ensure stock availability.</li>
-            <li>Small Achievement : obtained 4.8/5.0 review on Shopee Malaysia</li>
-        </ul>
 
         <span style=" font-weight: bold">ADMIN IN DIGI STORE</span><br />
         <span style=" font-weight: bold">AUG-NOV 2021</span><br />
@@ -505,6 +491,8 @@
 
     </div>
 
+    <br>
+    <br>
 
 
 
@@ -542,6 +530,7 @@
         <p class="copyright">
             Copyright © 2024 All Rights Reserved by Chow Wen Jun
         </p>
+
     </footer>
 
 
@@ -555,6 +544,14 @@
         const link = document.createElement('a');
         link.href = 'CHOWWENJUNRESUME.pdf';
         link.download = 'CHOWWENJUNRESUME.pdf';
+        link.dispatchEvent(new MouseEvent('click'));
+    }
+
+
+    function downloadPDF() {
+        const link = document.createElement('a');
+        link.href = 'wenjunresume.pdf';
+        link.download = 'wenjunresume.pdf';
         link.dispatchEvent(new MouseEvent('click'));
     }
 </script>
@@ -644,7 +641,7 @@
 
 
 
-    
+
 
     .tableone,
     tr,
@@ -670,7 +667,7 @@
     .site-footer {
         left: 0;
         bottom: 0;
-       
+
         width: 100%;
 
 
@@ -679,9 +676,9 @@
     .copyright {
         text-align: center;
         font-weight: bold;
-        
-    
-    
+
+
+
     }
 
 
@@ -901,7 +898,7 @@
             background-color: white;
             color: black;
             border: 2px solid #555555;
-            font-size: small;
+            font-size: smaller;
 
         }
 
