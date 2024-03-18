@@ -23,86 +23,352 @@
 
 </head>
 
+<div id="hamburger">
+  <button class="hammenu">☰</button>
+
+
+  <div class="menus">
+
+    <a href="index.html" style="border-bottom: none;">Home</a>
+    <a href="resume.html" style="border-bottom: none;">Resume</a>
+    <a href="projects.html" style="border-bottom: none;">Projects</a>
+    <a href="aboutpage.html">About</a>
+
+  </div>
+</div>
+
+
+<div id="desktopview">
+  <table class="tableone" width="100%;">
+    <tr>
+      <td style="width:25%;"></td>
+
+      <td><a href="index.html" class="option">HOME</a></td>
+      <td><a href="resume.html" class="option">RESUME</a></td>
+      <td><a href="projects.html" class="option">PROJECTS</a></td>
+      <td><a href="aboutpage.html" class="option">ABOUT</a></td>
+      <td style="width:25%;"></td>
+    </tr>
+  </table>
+
+</div>
+
+<div class="page-content">
+  <div class="header">
+
+    <p>
+      This website is fully developed and designed by Chow Wen Jun.
+    </p>
+
+    <h2>
+      Hosting Platform: GitHub
+    </h2>
+    <p>Special thanks to GitHub for hosting this website. All code was meticulously crafted and written by Chow Wen
+      Jun.</p>
+
+    <h2>
+      References:
+    </h2>
+    <p> Portions of the code on this website were inspired and adapted from resources available on Platform
+      below, which served as an invaluable educational tool during the development process!
+    </p>
+    <h2>
+      Icons Platform: CodePen
+
+    </h2>
+
+    <h2>Font Platforms: Font Awesome, Google Fonts</h2>
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <footer class="site-footer">
+    <table style="padding:20px;" width="100%;">
+      <colgroup>
+        <col style="width:50%;">
+        <col style="width:50%;">
+      </colgroup>
+      <hr style="opacity: 0.5;">
+
+      <tr>
+        <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+          <span>FOLLOW ME</span>
+        </td>
+        <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+          <span>QUICK LINKS</span>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: left; font-size: 25px;">
+          <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
+              class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i class="fa-solid fa-envelope"></i></a>
+        </td>
+        <td style="text-align: left;">
+          <a href="index.html">Home</a><br>
+          <a href="resume.html">Resume</a><br>
+          <a href="projects.html">Projects</a><br>
+          <a href="aboutpage.html">About</a>
+        </td>
+      </tr>
+    </table>
+    <hr style="opacity: 0.5;">
+    <p class="copyright">
+      Copyright © 2024 All Rights Reserved by Chow Wen Jun
+    </p>
+  </footer>
+
+
+</div>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    var menu = document.querySelector('.menus');
+    // Explicitly set the display style on page load
+    menu.style.display = 'none'; // Ensure this is set so that the toggle works on first click
+
+    document.querySelector('.hammenu').addEventListener('click', function () {
+      menu.style.display = (menu.style.display == 'none') ? 'block' : 'none';
+    });
+  });
+
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+    var menu = document.querySelector('.menus');
+    var pageContent = document.querySelector('.page-content'); // Select the main content of your page
+
+    document.querySelector('.hammenu').addEventListener('click', function () {
+      if (menu.classList.contains('active')) {
+        menu.classList.remove('active');
+        pageContent.style.display = 'block'; // Show the content when menu is not active
+      } else {
+        menu.classList.add('active');
+        pageContent.style.display = 'none'; // Hide the content when menu is active
+      }
+    });
+  });
+
+
+</script>
+
+
+
+
 <style>
-    .option {
-        color: #18272f;
-        position: relative;
-        text-decoration: none;
-        border-radius: 10px;
-        font-size: smaller;
-    }
+  .hammenu {
+    display: none;
+    /* Hide hamburger menu by default */
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    background-color: white;
+    border: none;
+    text-align: right;
+    width: 100%;
+
+  }
+
+  .menus {
+    display: none;
+    /* Hide menu by default */
+    padding: 10px;
+ 
+    
+  }
+
+  .menus a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+
+  /* Desktop-specific styles */
+  #desktopview .option {
+    color: #18272f;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: smaller;
+  }
 
 
-    .option::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        border-radius: 4px;
-        background-color: #18272f;
-        bottom: 0;
-        left: 0;
-        transform-origin: right;
-        transform: scaleX(0);
-        transition: transform 0.3s ease-in-out;
-    }
+  #desktopview .option::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #18272f;
+    transition: transform 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
 
-    .option:hover::before {
-        transform-origin: left;
-        transform: scaleX(1);
-    }
+  #desktopview .option:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
 
-    .header {
-        background-color: #cccccc;
-        text-align: left;
-        padding: 10px;
-        width: 85%;
-        /* or max-width if you prefer */
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 10px;
-        font-size: 12px;
+  .option {
+    color: #18272f;
+    position: relative;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: smaller;
+  }
 
 
-    }
+  .option::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #18272f;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .option:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  .header {
+    background-color: #cccccc;
+    text-align: left;
+    padding: 10px;
+    width: 85%;
+    /* or max-width if you prefer */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    font-size: 12px;
+
+
+  }
 
 
 
-    html {
-        font-family: "Inter", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
-        font-variation-settings:
-            "slnt" 0;
+  html {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
 
-    }
-
-
-
-    .site-footer a {
-        text-decoration: none;
-        color: black;
-    }
+  }
 
 
-    .site-footer {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 60px;
-        width: 100%;
+
+  .site-footer a {
+    text-decoration: none;
+    color: black;
+  }
 
 
-    }
+  .site-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+
+
+  }
+
+  .tableone,
+  tr,
+  td {
+
+    padding: 10px;
+    text-align: center;
+    border-collapse: collapse;
+  }
+
+
+
+
+
+
+  .copyright {
+    text-align: center;
+    font-weight: bold;
+  }
+
+
+  @media only screen and (max-width: 600px) {
 
     .tableone,
     tr,
     td {
+      padding: 5px;
 
-        padding: 10px;
-        text-align: center;
-        border-collapse: collapse;
+    }
+
+    .header {
+      padding: 5px;
+      font-size: 12px;
+
+    }
+
+    .header h2,
+    .header h3 {
+      font-size: small;
+
+    }
+
+
+    .modules td {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .modules ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin-top: 5px;
+    }
+
+    .modules li {
+      margin: 5px 0;
+    }
+
+    .modules th {
+      display: none;
+    }
+
+    .modules p {
+      font-size: 14px !important;
+
+    }
+
+    .modules button {
+      padding: 10px;
+    }
+
+    .hammenu {
+      display: block;
+      /* Show hamburger menu in mobile view */
+    }
+
+    #desktopview {
+      display: none;
     }
 
 
@@ -110,212 +376,29 @@
 
 
 
-    .copyright {
-        text-align: center;
-        font-weight: bold;
+
+
+
+
+    select {
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 15px;
+      width: 100%;
+
+
+
+
     }
 
-    @media only screen and (max-width: 600px) {
-
-        .tableone,
-        tr,
-        td {
-            padding: 5px;
-
-        }
-
-        .header {
-            padding: 5px;
-            font-size: 12px;
-
-        }
-
-        .header h2,
-        .header h3 {
-            font-size: small;
-
-        }
-
-
-        .modules td {
-            width: 100%;
-            padding: 10px;
-            font-size: 14px;
-        }
-
-        .modules ul {
-            list-style: disc;
-            padding-left: 20px;
-            margin-top: 5px;
-        }
-
-        .modules li {
-            margin: 5px 0;
-        }
-
-        .modules th {
-            display: none;
-        }
-
-        .modules p {
-            font-size: 14px !important;
-
-        }
-
-        .modules button {
-            padding: 10px;
-        }
-
-        #desktopview {
-            display: none;
-        }
-
-        #mobileview {
-            display: block !important;
-            text-align: center;
-
-
-
-
-        }
-
-
-
-
-
-        select {
-            border-radius: 10px;
-            padding: 10px;
-            font-size: 15px;
-            width: 100%;
-
-
-
-
-        }
-
-        option {
-            font-size: 15px;
-
-        }
-
-        html {
-            font-size: small;
-        }
+    option {
+      font-size: 15px;
 
     }
+
+    html {
+      font-size: small;
+    }
+
+  }
 </style>
-
-<body>
-
-
-    <div id="mobileview" style="display: none;">
-        <select class="option" onchange="location = this.value;">
-
-            <option value="index.html">HOME</option>
-            <option value="resume.html">RESUME</option>
-            <option value="projects.html">PROJECTS</option>
-            <option value="aboutpage.html" selected>ABOUT</option>
-
-        </select>
-    </div>
-
-
-    <div id="desktopview">
-        <table class="tableone" width="100%;">
-            <tr>
-                <td style="width:25%;"></td>
-
-                <td><a href="index.html" class="option">HOME</a></td>
-                <td><a href="resume.html" class="option">RESUME</a></td>
-                <td><a href="projects.html" class="option">PROJECTS</a></td>
-                <td><a href="aboutpage.html" class="option">ABOUT</a></td>
-                <td style="width:25%;"></td>
-            </tr>
-        </table>
-
-    </div>
-    <br>
-    <div class="header">
-
-        <p>
-            This website is fully developed and designed by Chow Wen Jun.
-        </p>
-
-        <h2>
-            Hosting Platform: GitHub
-        </h2>
-        <p>Special thanks to GitHub for hosting this website. All code was meticulously crafted and written by Chow Wen
-            Jun.</p>
-
-        <h2>
-            References:
-        </h2>
-        <p> Portions of the code on this website were inspired and adapted from resources available on Platform
-            below, which served as an invaluable educational tool during the development process!
-        </p>
-        <h2>
-            Icons Platform: CodePen
-
-        </h2>
-
-        <h2>Font Platforms: Font Awesome, Google Fonts</h2>
-
-
-
-    </div>
-
-
-
-
-
-
-
-    <footer class="site-footer">
-        <table style="padding:20px;" width="100%;">
-            <colgroup>
-                <col style="width:50%;">
-                <col style="width:50%;">
-            </colgroup>
-            <hr style="opacity: 0.5;">
-
-            <tr>
-                <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
-                    <span>FOLLOW ME</span>
-                </td>
-                <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
-                    <span>QUICK LINKS</span>
-                </td>
-            </tr>
-            <tr>
-                <td style="text-align: left; font-size: 25px;">
-                    <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
-                            class="fa-brands fa-linkedin"></i></a>
-                    <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i class="fa-solid fa-envelope"></i></a>
-                </td>
-                <td style="text-align: left;">
-                    <a href="index.html">Home</a><br>
-                    <a href="resume.html">Resume</a><br>
-                    <a href="projects.html">Projects</a><br>
-                    <a href="aboutpage.html">About</a>
-                </td>
-            </tr>
-        </table>
-        <hr style="opacity: 0.5;">
-        <p class="copyright">
-            Copyright © 2024 All Rights Reserved by Chow Wen Jun
-        </p>
-    </footer>
-
-
-
-
-
-
-
-
-
-
-</body>
-
-</html>
