@@ -34,14 +34,18 @@
         <col style="width: 25%">
     </colgroup>
 
-    <div id="mobileview" style="display: none;">
-        <select class="option" onchange="location = this.value;">
-            <option value="index.html" selected>HOME</option>
-            <option value="resume.html">RESUME</option>
-            <option value="projects.html">PROJECTS</option>
-            <option value="aboutpage.html">ABOUT</option>
+    <div id="hamburger">
+        <button class="hammenu">☰</button>
 
-        </select>
+
+        <div class="menus">
+
+            <a href="index.html" style="border-bottom: none;">Home</a>
+            <a href="resume.html" style="border-bottom: none;">Resume</a>
+            <a href="projects.html" style="border-bottom: none;">Projects</a>
+            <a href="aboutpage.html">About</a>
+
+        </div>
     </div>
 
 
@@ -59,115 +63,171 @@
         </table>
 
     </div>
-    <br>
-        <h2 class="fade-in" style="font-weight: bold; text-align:center;">Hello and Welcome! </h2>
-  
-    
 
 
-
-    <div class="header fade-in">
-        <p>
-            I'm Chow Wen Jun, a technology enthusiast and a lifelong learner on a quest to blend creativity with
-            technology. With a Diploma in Information Technology from Taylor's College under my belt, I have laid a
-            robust foundation in the world of tech, mastering the intricacies of programming, database management, and
-            software development.
-
-        </p>
-        <p>Currently, I am elevating my expertise by pursuing a Bachelor's degree in Computer Science, where I am
-            specializing
-            in the dynamic fields of Data Science and Cyber Security. This degree is not just an academic pursuit; it's
-            a journey into the depths of algorithms, systems, and data protection- a journey I am eager to share with
-            the world.</p>
-
-        <p>
-            As I navigate the thrilling path of my Computer Science degree, I remain on the lookout for collaborative
-            ventures, innovative challenges, and opportunities to contribute to impactful projects.
-        </p>
-
-        <p class="greeting">Looking forward to connecting with you!</p>
-
+    <div class="page-content">
         <br>
+        <h2 class="fade-in" style="font-weight: bold; text-align:center;">Hello and Welcome! </h2>
 
 
 
 
 
+        <div class="header fade-in">
+            <p>
+                I'm Chow Wen Jun, a technology enthusiast and a lifelong learner on a quest to blend creativity with
+                technology. With a Diploma in Information Technology from Taylor's College under my belt, I have laid a
+                robust foundation in the world of tech, mastering the intricacies of programming, database management,
+                and
+                software development.
+
+            </p>
+            <p>Currently, I am elevating my expertise by pursuing a Bachelor's degree in Computer Science, where I am
+                specializing
+                in the dynamic fields of Data Science and Cyber Security. This degree is not just an academic pursuit;
+                it's
+                a journey into the depths of algorithms, systems, and data protection- a journey I am eager to share
+                with
+                the world.</p>
+
+            <p>
+                As I navigate the thrilling path of my Computer Science degree, I remain on the lookout for
+                collaborative
+                ventures, innovative challenges, and opportunities to contribute to impactful projects.
+            </p>
+
+            <p class="greeting">Looking forward to connecting with you!</p>
+
+            <br>
+
+
+
+
+
+
+        </div>
+
+        <footer class="site-footer">
+            <table style="padding:20px;" width="100%;">
+                <colgroup>
+                    <col style="width:50%;">
+                    <col style="width:50%;">
+                </colgroup>
+                <hr style="opacity: 0.5;">
+
+                <tr>
+                    <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+                        <span>FOLLOW ME</span>
+                    </td>
+                    <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
+                        <span>QUICK LINKS</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left; font-size: 25px;">
+                        <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i
+                                class="fa-solid fa-envelope"></i></a>
+                    </td>
+                    <td style="text-align: left;">
+                        <a href="index.html">Home</a><br>
+                        <a href="resume.html">Resume</a><br>
+                        <a href="projects.html">Projects</a><br>
+                        <a href="aboutpage.html">About</a>
+                    </td>
+                </tr>
+            </table>
+            <hr style="opacity: 0.5;">
+            <p class="copyright">
+                Copyright © 2024 All Rights Reserved by Chow Wen Jun
+            </p>
+        </footer>
 
     </div>
-
-    <footer class="site-footer">
-        <table style="padding:20px;" width="100%;">
-            <colgroup>
-                <col style="width:50%;">
-                <col style="width:50%;">
-            </colgroup>
-            <hr style="opacity: 0.5;">
-
-            <tr>
-                <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
-                    <span>FOLLOW ME</span>
-                </td>
-                <td style="text-align: left; letter-spacing: 3px; font-weight: bold;">
-                    <span>QUICK LINKS</span>
-                </td>
-            </tr>
-            <tr>
-                <td style="text-align: left; font-size: 25px;">
-                    <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
-                            class="fa-brands fa-linkedin"></i></a>
-                    <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i class="fa-solid fa-envelope"></i></a>
-                </td>
-                <td style="text-align: left;">
-                    <a href="index.html">Home</a><br>
-                    <a href="resume.html">Resume</a><br>
-                    <a href="projects.html">Projects</a><br>
-                    <a href="aboutpage.html">About</a>
-                </td>
-            </tr>
-        </table>
-        <hr style="opacity: 0.5;">
-        <p class="copyright">
-            Copyright © 2024 All Rights Reserved by Chow Wen Jun
-        </p>
-    </footer>
 
 
 
     <script>
-        function displayResult() {
-            var selectElement = document.getElementById("optionSelect");
-            var resultElement = document.getElementById("result");
+        const slideshowContainers = document.querySelectorAll('.slideshow-container');
 
-            var selectedValue = selectElement.value;
+        slideshowContainers.forEach(container => {
+            let slideIndex = 0;
+            const slides = container.querySelectorAll('.image');
 
-            hideAllContent();
-
-            if (selectedValue === "dit") {
-                document.getElementById("content-dit").style.display = "block";
-            } else if (selectedValue === "bcs") {
-                document.getElementById("content-bcs").style.display = "block";
-            } else if (selectedValue === "showall") {
-                document.getElementById("content-dit").style.display = "block";
-                document.getElementById("content-bcs").style.display = "block";
+            function showSlide(n) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                slides[n].classList.add('active');
             }
 
-        }
+            function changeSlide(n) {
+                slideIndex += n;
+                if (slideIndex >= slides.length) slideIndex = 0;
+                if (slideIndex < 0) slideIndex = slides.length - 1;
+                showSlide(slideIndex);
+            }
 
-        function hideAllContent() {
-            var contentDivs = document.querySelectorAll("[id^='content-']");
-            contentDivs.forEach(function (div) {
-                div.style.display = "none";
+            container.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
+            container.querySelector('.next').addEventListener('click', () => changeSlide(1));
+
+            showSlide(slideIndex);
+
+            let timer = setInterval(() => changeSlide(1), 5000);
+
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            container.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
             });
-        }
 
-        function resetSelect() {
-            var selectElement = document.getElementById("optionSelect");
-            selectElement.selectedIndex = 0;
-        }
+            container.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                if (touchEndX < touchStartX) changeSlide(1);
+                if (touchEndX > touchStartX) changeSlide(-1);
+            });
+        });
 
 
-        window.onload = resetSelect;
+        //javascript for hamburger menu 
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var menu = document.querySelector('.menus');
+            // Explicitly set the display style on page load
+            menu.style.display = 'none'; // Ensure this is set so that the toggle works on first click
+
+            document.querySelector('.hammenu').addEventListener('click', function () {
+                menu.style.display = (menu.style.display == 'none') ? 'block' : 'none';
+            });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var menu = document.querySelector('.menus');
+            var pageContent = document.querySelector('.page-content'); // Select the main content of your page
+
+            document.querySelector('.hammenu').addEventListener('click', function () {
+                if (menu.classList.contains('active')) {
+                    menu.classList.remove('active');
+                    pageContent.style.display = 'block'; // Show the content when menu is not active
+                } else {
+                    menu.classList.add('active');
+                    pageContent.style.display = 'none'; // Hide the content when menu is active
+                }
+            });
+        });
+
+        document.querySelectorAll('.menus a').forEach(link => {
+            link.addEventListener('click', function () {
+                // Remove 'active' class from all links
+                document.querySelectorAll('.menus a').forEach(otherLink => {
+                    otherLink.classList.remove('active');
+                });
+
+                // Add 'active' class to clicked link
+                this.classList.add('active');
+            });
+        });
     </script>
 
 </body>
@@ -175,9 +235,40 @@
 </html>
 
 <style>
+    .hammenu {
+        display: none;
+        /* Hide hamburger menu by default */
+        cursor: pointer;
+        padding: 10px;
+        font-size: 24px;
+        background-color: white;
+        border: none;
+        text-align: right;
+        width: 100%;
+
+    }
+
+    .menus {
+        display: none;
+        /* Hide menu by default */
+        padding: 10px;
+
+
+    }
+
+    .menus a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
     .copyright {
         text-align: center;
     }
+
 
     .tableone,
     tr,
@@ -367,7 +458,8 @@
         color: #18272f;
         position: relative;
         text-decoration: none;
-        font-size: smaller;
+        border-radius: 10px;
+        font-size: small;
     }
 
     .option::before {
@@ -387,6 +479,13 @@
     .option:hover::before {
         transform-origin: left;
         transform: scaleX(1);
+    }
+
+    .slideshow-container {
+        max-width: 100%;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 65%;
     }
 
 
@@ -485,6 +584,10 @@
 
         }
 
+        .hammenu {
+            display: block;
+            /* Show hamburger menu in mobile view */
+        }
 
 
 
