@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
 
 
-    <title>Chow Wen Jun | About</title>
-    <link rel="icon" href="image1.jpg" type="image/jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anek+Tamil&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/6311b05fbe.js" crossorigin="anonymous"></script>
+  <title>Chow Wen Jun | About</title>
+  <link rel="icon" href="image1.jpg" type="image/jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Tamil&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6311b05fbe.js" crossorigin="anonymous"></script>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400&family=Quicksand:wght@400;600&family=Rajdhani&family=Saira:ital,wght@0,400;1,100;1,200&family=Silkscreen&display=swap"
-        rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400&family=Quicksand:wght@400;600&family=Rajdhani&family=Saira:ital,wght@0,400;1,100;1,200&family=Silkscreen&display=swap"
+    rel="stylesheet">
 
 
 </head>
@@ -53,8 +54,8 @@
 </div>
 
 <div class="page-content">
-    <br>
-    <h2 class="fade-in headerfonts" style="font-weight: bold; text-align:center;">About </h2>
+  <br>
+  <h2 class="fade-in headerfonts" style="font-weight: bold; text-align:center;">About </h2>
 
   <div class="header">
 
@@ -63,7 +64,7 @@
     </p>
 
     <h2>
-      Hosting Platform: GitHub
+      Hosting Platform: <i class="fa-brands fa-github" style="font-size: 19px;"></i> GitHub
     </h2>
     <p>Special thanks to GitHub for hosting this website. All code was meticulously crafted and written by Chow Wen
       Jun.</p>
@@ -75,11 +76,11 @@
       below, which served as an invaluable educational tool during the development process!
     </p>
     <h2>
-      Icons Platform: CodePen
+      Icons Platform: <i class="fa-brands fa-codepen"></i> CodePen
 
     </h2>
 
-    <h2>Font Platforms: Font Awesome, Google Fonts</h2>
+    <h2>Font Platforms: <i class="fa-solid fa-font-awesome"></i> Font Awesome, <i class="fa-brands fa-google"></i> Google Fonts</h2>
 
 
 
@@ -108,10 +109,11 @@
         </td>
       </tr>
       <tr>
-        <td style="text-align: left; font-size:25px;">
+        <td style="text-align: left;">
           <a href="https://www.linkedin.com/in/chow-wen-jun-642073202" class="icon link"><i
               class="fa-brands fa-linkedin" style="color: #2f48ca;"></i></a>
-          <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i class="fa-solid fa-envelope" style="color: #808080;"></i></a>
+          <a href="mailto:cwenjunn523@gmail.com" class="icon link"><i class="fa-solid fa-envelope"
+              style="color: #808080;"></i></a>
         </td>
         <td style="text-align: left;">
           <a href="index.html">Home</a><br>
@@ -160,16 +162,16 @@
   });
 
   document.querySelectorAll('.menus a').forEach(link => {
-  link.addEventListener('click', function() {
-    // Remove 'active' class from all links
-    document.querySelectorAll('.menus a').forEach(otherLink => {
-      otherLink.classList.remove('active');
+    link.addEventListener('click', function () {
+      // Remove 'active' class from all links
+      document.querySelectorAll('.menus a').forEach(otherLink => {
+        otherLink.classList.remove('active');
+      });
+
+      // Add 'active' class to clicked link
+      this.classList.add('active');
     });
-    
-    // Add 'active' class to clicked link
-    this.classList.add('active');
   });
-});
 
 
 
@@ -196,8 +198,8 @@
     display: none;
     /* Hide menu by default */
     padding: 10px;
- 
-    
+
+
   }
 
   .menus a {
@@ -242,7 +244,7 @@
     font-size: smaller;
   }
 
-  .icon i{
+  .icon i {
     font-size: 30px;
   }
 
@@ -330,18 +332,19 @@
   }
 
   .menus a.active {
-  background-color: #ccc; /* Example hover color */
-}
+    background-color: #ccc;
+    /* Example hover color */
+  }
 
-.headerfonts{
+  .headerfonts {
     font-family: 'Bai Jamjuree', sans-serif;
-        font-family: 'Quicksand', sans-serif;
-        font-family: 'Rajdhani', sans-serif;
-        font-family: 'Saira', sans-serif;
-        font-family: 'Silkscreen', cursive;
-        font-size: 40px;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Saira', sans-serif;
+    font-family: 'Silkscreen', cursive;
+    font-size: 40px;
 
-}
+  }
 
 
 
@@ -427,9 +430,9 @@
 
     }
 
-    .icon i{
-    font-size: 25px;
-  }
+    .icon i {
+      font-size: 25px;
+    }
 
 
     option {
